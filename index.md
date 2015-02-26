@@ -1,14 +1,13 @@
 ---
 layout: page
+title: What is Chorus?
 ---
-
-## What is Chorus?
 
 Chorus is a BDD testing tool which makes it easier to write BDD tests for complex systems
 
 Chorus can help orchestrate tests across components in a distributed architecture.
 
-## Why is it needed?
+## Why is Chorus needed?
 
 It can be very difficult to write full-system integration tests using conventional BDD techniques.
 
