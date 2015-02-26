@@ -4,7 +4,11 @@ title: Starting Processes
 ---
 
 Chorus has a [built in handler](/pages/BuiltInHandlers/BuiltInHandlers) class which allows you to start and stop local processes during a test.
- 
+
+You can also search for patterns in a process' standard output, and send standard input to a running process
+
+Both Java processes and other executable processes are supported
+
 For example, using the Processes handler would allow you to do the following:
  
     Uses: Processes
@@ -12,9 +16,9 @@ For example, using the Processes handler would allow you to do the following:
     Feature: Start a local publisher and subscriber
         Given I start a publisher process named pub
         And I start a subscriber process named sub
+        ...
 
-Usually you don't want you test to contain steps which do something technical like the this.
-Instead, you can also use [directives](/pages/LanguageExtensions/Directives) to start a process:
+If preferred, you can also use [directives](/pages/LanguageExtensions/Directives) to start a process:
 
     Uses: Processes
 
@@ -28,11 +32,12 @@ If you wish to connect and run steps on the process you started, you can tell th
 
     Uses: Processes
 
-    #! Processes start pub, sub
-    #! Processes connect pub, sub
-    Feature: Send from publisher process and receive in subscriber process
-        When I send 10 messages
-        Then I receive 10 messages
+    #! Processes start bookingService, quoteEngine
+    #! Processes connect bookingService, quoteEngine
+    Feature: I can book a trade when my quote is lifted
+        When I quote a Bid Offer of 99.9 / 100.1 for T 5.5% 22/05/2020
+        And my Bid price is lifted
+        Then a SELL trade is booked for 99.9
 
 To get this work you just need to supply a remotingPort in the configuration for each process. Then you can then [export test steps](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart) from the processes and call them during the scenario
 
