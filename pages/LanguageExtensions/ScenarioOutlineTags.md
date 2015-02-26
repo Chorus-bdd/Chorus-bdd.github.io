@@ -3,14 +3,20 @@ layout: page
 title: Scenario Outline Tags
 ---
 
-Chorus supports Scenario-Outline:, and this can be used in an identical way to the standard Gherkin usage in Cucumber and other frameworks.
-e.g.
+In Chorus you can [tag features and scenarios](/TaggingScenarios) and use the tags to run a subset of your tests
+
+Chrous provides a special way to tag individual tests in a 'Scenario-Outline:' scenario
+
+Scenario-Outline: can be used in an identical way to the standard Gherkin usage in Cucumber and other frameworks.
+
+This mechanism allows you to specify a table of values to be injected into your scenario steps.
+The test gets run once for each row
 
     Scenario-Outline: Create parameterised scenarios
         When I add placeholder variable <myVariable> to a step
-        Then the placeholder is replaced with a value from the table
-        And one scenario is generated for each table row
-        
+        Then the placeholder is replaced with a matching value from the table
+        And the scenario runs once for each row of values in the table
+
         Examples:
             | myVariable |
             | value1     |
