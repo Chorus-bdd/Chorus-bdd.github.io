@@ -7,11 +7,14 @@ title: Context Variables
 
 ChorusContext is a Map of key value pairs which is managed by Chorus and accessible during each test scenario
 
-Variables stored in the map can be accessed and set in your Java step implementations, both locally and remotely
-They can also be expanded if referenced within scenario steps
+The map can be accessed in your Java step implementations
 
-For remotely executed test steps, this Map is serialized and sent to your remote component when a step is invoked.  
+Variables stored in the map can also be expanded if they are referenced within scenario steps
+
+For remotely executed test steps, the map is serialized and sent to your remote component when a step is invoked.
 Any changes made to it in the remote process are propagated back to the interpreter process once the step has completed.
+
+When used for distributed testing this means you can share state during the test with all the components involved.
 
 ###Loading variables from property files###
 
