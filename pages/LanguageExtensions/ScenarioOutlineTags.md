@@ -3,7 +3,7 @@ layout: page
 title: Scenario Outline Tags
 ---
 
-In Chorus you can [tag features and scenarios](/TaggingScenarios) and use the tags to run a subset of your tests
+In Chorus you can [tag features and scenarios](/pages/RunningChorus/TaggingScenarios) and use the tags to run a subset of your tests
 
 Chrous provides a special way to tag individual tests in a 'Scenario-Outline:' scenario
 
