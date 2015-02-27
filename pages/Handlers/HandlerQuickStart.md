@@ -17,7 +17,9 @@ Take the following feature file, simplefeature.feature
             ...
 
 
-For this feature, Chorus will look first for a handler class with an annotation which matches the feature name - `@Handler("Simple Feature")` :
+When running this feature, Chorus will look for a handler class with an annotation matching the feature name
+
+This would be `@Handler("Simple Feature")`
 
     import org.chorusbdd.chorus.annotations.Handler;
 
@@ -40,7 +42,11 @@ You can also add the `Uses:` keyword to the top of your feature files to name ot
 
     Feature: Simple Feature
 
-The feature above would use the handler classes annotated `@Handler("My Shared Handler")` and `@Handler("Remoting")`
+When running this feature, Chorus will look for handler classes annotated:
+
+ * `@Handler("My Shared Handler")` and
+ * `@Handler("Remoting")`
+
 The default handler `@Handler("Simple Feature")` will also be used, if it exists.
 
 This mechanism enables you to share handler classes between features.
