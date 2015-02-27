@@ -28,7 +28,7 @@ These properties can be set in a chorus.properties file (or myfeature.properties
 </tr>
 <tr>
 	<td>classpath</td>
-	<td>For Java, defaults to interpreter classpath</td>
+	<td>For Java, will default to share the Chorus interpreter's classpath</td>
 	<td>Set the classpath which will be used by your process (for java processes only)</td>
 </tr>
 <tr>
@@ -43,23 +43,18 @@ These properties can be set in a chorus.properties file (or myfeature.properties
 </tr>
 <tr>
 	<td>logging</td>
-	<td>false</td>
-	<td>DEPRECATED - use stdOutMode and stdErrMode to configure logging process output to log files</td>
+	<td>no default</td>
+	<td>If this property is set true, it will switch stdOutMode and stdErrorMode to FILE. If false then both will be INLINE. Leave it unset if you wish to set the stdOutMode and stdErrorMode individually</td>
 </tr>
 <tr>
 	<td>stdOutMode</td>
-	<td>inline</td>
-	<td>What do to with standard output stream from started process, one of inline, file, captured, capturedwithlog</td>
+	<td>FILE</td>
+	<td>What do to with standard output stream from started process, one of INLINE or FILE</td>
 </tr>
 <tr>
 	<td>stdErrMode</td>
-	<td>inline</td>
-	<td>What do to with standard error stream from started process, one of inline, file, captured, capturedwithlog</td>
-</tr>
-<tr>
-	<td>readAheadBufferSize</td>
-	<td>65536</td>
-	<td>Maximum length in bytes of process output to buffer when a process stdOut or stdErr is in 'captured' mode</td>
+	<td>FILE</td>
+	<td>What do to with standard error stream from started process, one of INLINE or FILE</td>
 </tr>
 <tr>
 	<td>readTimeoutSeconds</td>
@@ -83,16 +78,16 @@ These properties can be set in a chorus.properties file (or myfeature.properties
 </tr>
 <tr>
 	<td>processCheckDelay</td>
-	<td>500</td>
+	<td>750</td>
 	<td>miiliseconds after which to check started processes are still running or fail the start process step</td>
 </tr>
 <tr>
-	<td>jmxport</td>
+	<td>remotingPort</td>
 	<td>no default</td>
-	<td>Port on which to start the jmx management service for your process. This is required when you are using Remoting handler. Setting this property will also cause the system properties which turn on the jmx management service to be set. (java processes only)</td>
+	<td>Port on which to start the remoting service. This is required when you want to 'connect' to run steps exported by the process. When start a java process using the default jmx protocol for remoting, setting this property will cause the system properties which turn on the jmx management service to be set.</td>
 </tr>
 <tr>
-	<td>debugport</td>
+	<td>debugPort</td>
 	<td>no default</td>
 	<td>Enable the debugger when starting the jvm and set it up to listen for connections on the port specified (java processes only)</td>
 </tr>
@@ -103,8 +98,8 @@ These properties can be set in a chorus.properties file (or myfeature.properties
 </tr>
 <tr>
 	<td>scope</td>
-	<td>scenario</td>
-	<td>The scope for the process, scenario or feature, feature scoped processes will be terminated at the end of the feature, scenario at the end of each scenario</td>
+	<td>SCENARIO</td>
+	<td>The scope for the process, SCENARIO or FEATURE, feature scoped processes will be terminated at the end of the feature, scenario at the end of each scenario</td>
 </tr>
 
 </table>
