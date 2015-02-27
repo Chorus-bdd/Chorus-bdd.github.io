@@ -40,16 +40,16 @@ You can also add the `Uses:` keyword to the top of your feature files to name ot
     
     Feature: Simple Feature
 
-The feature above would use handler class annotated `@Handler("My Shared Handler")`, `@Handler("Remoting")` 
+The feature above would use the handler classes annotated `@Handler("My Shared Handler")` and `@Handler("Remoting")`
 The default handler `@Handler("Simple Feature")` will also be used, if it exists.
 
-This mechanism enables you to reuse handler classes between multiple features.
+This mechanism enables you to share handler classes between features.
         
 n.b. the `Uses:` keyword is a Chorus extension, it is not part of the original Gherkin syntax
 
 ### Step methods ###
 
-Handlers classes contains methods annotated with the @Step annotation  
+Handler classes contains methods annotated with the @Step annotation
 The `@Step` annotation has a text value which is matched against your scenario steps  
 The first word of the step, (e.g. Given, Then, When) is stripped before matching:
 
@@ -88,7 +88,7 @@ For each capture group, you need to add an argument to your step method:
     
     
 Chorus will perform type coercion to covert the captured values to the correct type  
-Below both of the step method arguments are ints, so Chorus will try to convert the values to int:
+Below both of the step method arguments are of type 'int', so Chorus will try to convert the values to int:
         
         @Step("I add the numbers (\d+) and (.*)") 
         public void addTheNumbers(int number1, int number2) {
@@ -98,20 +98,15 @@ Below both of the step method arguments are ints, so Chorus will try to convert 
 
 ### Checking conditions and failing steps ###
 
-If you want to fail a step, simply throw an exception from the step method  The recommended way to do this is to use the ChorusAssert or JUnit Assert methods, which will throw AssertionError on failure.
+If you want to fail a step, simply throw an exception from the step method
+
+The recommended way to do this is to use the ChorusAssert or JUnit Assert methods, which will throw AssertionError on failure.
 
         
         @Step("The result is (\d+)") 
         public void checkTheResult(int result) {
             ChorusAssert.assertEquals(result, this.actualResult);
         }
-        
-### Handling latency when testing conditions ###
-
-When testing distributed systems, you often need to allow some time for a condition to be satisfied  
-In this case, you can use the @PassesWithin annotation, to allow a certain amount of time within which your Assertion should succeed.
-
-See [Passes Within Annotation](/pages/BuiltInHandlers/Remoting/PassesWithinAnnotation)
 
 
 ### Marking steps Pending ###
@@ -139,6 +134,13 @@ If you return a value from a step method, this value will be visible in the Chor
         }
 
 
+### Handling latency when testing conditions ###
+
+When testing distributed systems, you often need to allow some time for a condition to be satisfied
+In this case, you can use the @PassesWithin annotation, to allow a certain amount of time within which your Assertion should succeed.
+
+See [Passes Within Annotation](/pages/BuiltInHandlers/Remoting/PassesWithinAnnotation)
+
 
 ### Handler Lifecycle ###
 
@@ -162,7 +164,7 @@ You can add a method to your handler which is annotated `@Destroy` if you need t
             }
         }
         
-It is also [possible to scope a Handler class to Feature scope](/pages/Handlers/HandlerScope)
+It is also [possible to scope a Handler class to Feature scope](/pages/Handlers/HandlerLifecycle)
 
 ### Accessing interpreter context ###
 

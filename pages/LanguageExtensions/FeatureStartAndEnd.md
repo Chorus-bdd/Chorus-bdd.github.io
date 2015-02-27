@@ -5,13 +5,12 @@ title: Feature Start and End
 
 In an ideal world, all scenario should start from a clean slate with no previous set up performed.
 
-This is desirable to ensure there are no preconditions or ordering which can lead to the success and failure of any given scenario.  
-Provided this is the case, it is possible to run any one scenario in isolation, and expect that scenario to pass.
+This is desirable to ensure there are no preconditions or ordering effects which can lead to the success and failure of any scenario.
 
-Generally, where each scenario shares some set up steps, these steps are put into a `Background:` section which is a standard part of the Cucumber / gherkin language.  
+Often, where each scenario shares some set up steps, these steps are put into a `Background:` section.
 The background section runs for every scenario.
 
-However, there are often valid and pragmatic reasons why you might want to perform background steps at the feature level.  
+However, there are often reasons why you might want to perform background steps just once per feature.
 
 For example:
 
