@@ -20,6 +20,7 @@ Chorus BDD would like to thank:
 
 * [The nice people at Jetbrains](https://www.jetbrains.com/) for a project license for **Intellij IDEA**, and for **TeamCity** which helps us build and test Chorus - your company rocks!
 * [Github, obviously](https://github.com)
+* [Icyboards](http://icyboards.com/), for free [forum hosting](http://forum.chorusbdd.org/)
 
 
 
