@@ -22,21 +22,21 @@ Lastly, if you add a `chorus.properties` to the top level of your classpath, thi
 Properties in the shared chorus.properties may be overridden by those in a feature properties file.
 This allows you to set default property values and override them locally.
 
-## Handler's which support subconfigurations ##
+## Handler's which support sub-configurations ##
 
 A simple property for a handler is in the form:
 
     handlerName.propertyName=value
 
-Sometimes a handler supports subconfigurations. For example, the ProcessesManager requires one subconfiguration per process
+Sometimes a handler supports sub-configurations. For example, the ProcessesManager requires one sub-configuration per process
 
 These are in the form:
 
     handlerName.subconfigurationName.propertyName=value
 
-## Defaults for subconfigurations ##
+## Defaults for sub-configurations ##
 
-It's also possible to set default values for subconfigurations
+It's also possible to set default values for sub-configurations
 
 Imagine we need to set the mainclass for three components for the `Processes` handler.
 The same main class is required for all three
@@ -47,7 +47,7 @@ Without a default it would be configured like this:
 * `processes.pricingServer.mainclass=org.chorusbdd.MyMain`
 * `processes.salesUI.mainclass=org.chorusbdd.MyMain`
 
-Instead we can set the mainclass property in the `default` subconfiguration:
+Instead we can set the mainclass property in the `default` sub-configuration:
 
 * `processes.default.mainclass=org.chorusbdd.MyMain`
 
