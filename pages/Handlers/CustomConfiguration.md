@@ -45,7 +45,7 @@ For example, the built in Processes handler supports setting a group of properti
 
 It's very easy to load properties for a sub-configuration with the HandlerConfigLoader:
 
-e.g. to load process properties for myProcessOne:
+e.g. to load process properties for processOne:
 
     Properties processOneProps = new HandlerConfigLoader().loadPropertiesForSubGroup(configurationManager, "processes", "processOne');
 
