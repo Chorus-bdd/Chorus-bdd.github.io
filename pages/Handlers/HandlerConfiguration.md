@@ -22,20 +22,36 @@ Lastly, if you add a `chorus.properties` to the top level of your classpath, thi
 Properties in the shared chorus.properties may be overridden by those in a feature properties file.
 This allows you to set default property values and override them locally.
 
-Some handlers also support providing defaults in the following manner.
-Imagine I need to set the port for three components for the `Remoting` handler:
+## Handler's which support subconfigurations ##
 
-Without a default it would appear like this:
+A simple property for a handler is in the form:
 
-* `remoting.tradingServer.port=18011`
-* `remoting.pricingServer.port=10811`
-* `remoting.salesUI.port=10811`
+    handlerName.propertyName=value
 
-Instead I could simply set the port property in the remoting handler's **default** property group:
+Sometimes a handler supports subconfigurations. For example, the ProcessesManager requires one subconfiguration per process
 
-* `remoting.default.port=10811`
+These are in the form:
 
-I can override the default by setting a value for a specific component
+    handlerName.subconfigurationName.propertyName=value
+
+## Defaults for subconfigurations ##
+
+It's also possible to set default values for subconfigurations
+
+Imagine we need to set the mainclass for three components for the `Processes` handler.
+The same main class is required for all three
+
+Without a default it would be configured like this:
+
+* `processes.tradingServer.mainclass=org.chorusbdd.MyMain`
+* `processes.pricingServer.mainclass=org.chorusbdd.MyMain`
+* `processes.salesUI.mainclass=org.chorusbdd.MyMain`
+
+Instead we can set the mainclass property in the `default` subconfiguration:
+
+* `processes.default.mainclass=org.chorusbdd.MyMain`
+
+You can override the default by setting a value for a specific component
 
 ## Loading Properties ##
 

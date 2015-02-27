@@ -27,6 +27,7 @@ Once you have the ConfigurationManager, getting properties is very simple:
 
 This would load any properties prefixed with 'myHandlerName.'
 
+
 ### Getting properties for a handler which supports sub-configurations ###
 
 Sometimes a handler requires sub-configurations or sub-groups of properties.
