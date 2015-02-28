@@ -3,7 +3,7 @@ layout: page
 title: Configurations
 ---
 
-Sometimes it is useful to run the same feature twice using different configurations.
+Sometimes it is useful to run the same feature several times using different configurations.
 
 This might help in many situations, e.g.:
 
