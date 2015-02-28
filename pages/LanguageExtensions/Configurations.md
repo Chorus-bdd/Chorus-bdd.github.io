@@ -4,11 +4,11 @@ title: Configurations
 ---
 
 Sometimes it is useful to run the same feature twice using different configurations.
+
 This might help in many situations, e.g.:
 
 * Testing a new service implementation behaves the same way as a legacy implementation
 * Migrating from an old component to a new component
-* Testing the same algorithm with different config settings
 
 Chorus supports a keyword Configurations: which can be added to the top of your feature file:
 e.g.
@@ -22,19 +22,23 @@ With this added, the feature will be run once for each configuration name specif
 ###Using Configurations with Properties files###
 
 Some [built in handlers](/pages/BuiltInHandlers/BuiltInHandlers) use properties files for configuration.  
-When configurations are used:
 
-* Chorus will first read the properties from the standard locations
-* Chorus will also look for properties files appending the current configuration name
+When configurations are used you can prefix handler properties with the name of a configuration
 
-e.g. for a feature `myfeature.feature`:  
+e.g You can set the property **handlerName.handlerProperty=value** to different values for config1 and config2 in the following way:
 
-    myfeature.properties,  
-    myfeature-confA.properties,  
-    myfeature-confB.properties
+    configurations.config1.handlerName.handlerProperty=value
+    configurations.config2.handlerName.handlerProperty=value
 
-Properties in a configuration property file will override similar properties in the default config  
+When a configuration runs, properties set for that configuration will override any properties where a configuration is not specified.
+
+i.e. the above properties would override the property set as **handler.handlerProperty=value**
+
+An alternative way to manage config specific properties, if you don't want to use the configurations.configName prefix, is to put properties
+into a properties file which has -configName appended to the name - e.g. myFeature-myConfig.properties
+
 See [Handler Configuration](/pages/Handlers/HandlerConfiguration) for more details
+
 
 ###Using Configurations in a Handler class###
 
