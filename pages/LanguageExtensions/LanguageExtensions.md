@@ -10,4 +10,6 @@ Chorus provides several language extensions to Gherkin, which let you do more wi
 * [Feature Start and End](/pages/LanguageExtensions/FeatureStartAndEnd) - Add initialization and tear down at feature level
 * [Context Variables](/pages/BuiltInHandlers/ChorusContext/ChorusContext) - Store and access variables within your test steps
 * [Scenario Outline Tags](/pages/LanguageExtensions/ScenarioOutlineTags) - Add tags within scenario outline tables
+* [Configurations](/pages/LanguageExtensions/Configurations) - Run a feature more than once using different configuration properties
+
 
