@@ -31,13 +31,13 @@ Alternatively, download links are below:
 
 ###2.0.0###
 
-[chorus-2.0.0.jar](/downloads/2.0.0/chorus-2.0.0.jar)
+[chorus-2.0.0.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus/2.0.0/chorus-2.0.0.jar)
 
-[chorus-2.0.0-sources.jar](/downloads/2.0.0/chorus-2.0.0-sources.jar)
+[chorus-2.0.0-sources.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus/2.0.0/chorus-2.0.0-sources.jar)
 
-[chorus-spring-2.0.0.jar](/downloads/2.0.0/chorus-spring-2.0.0.jar)
+[chorus-spring-2.0.0.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus-spring/2.0.0/chorus-spring-2.0.0.jar)
 
-[chorus-spring-2.0.0-sources.jar](/downloads/2.0.0/chorus-spring-2.0.0-sources.jar)
+[chorus-spring-2.0.0-sources.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus-spring/2.0.0/chorus-spring-2.0.0-sources.jar)
 
 
 

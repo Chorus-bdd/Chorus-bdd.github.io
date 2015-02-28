@@ -27,9 +27,10 @@ Once you have the ConfigurationManager, getting properties is very simple:
 
 This would load any properties prefixed with 'myHandlerName.'
 
+
 ### Getting properties for a handler which supports sub-configurations ###
 
-Sometimes a handler requires sub-configurations or sub-groups of properties.
+Sometimes a handler requires sub-configurations.
 
 For example, the built in Processes handler supports setting a group of properties for each named process:
 
@@ -42,13 +43,13 @@ For example, the built in Processes handler supports setting a group of properti
     #defaults for all processes
     processes.default.logging = true
 
-It's very easy to load properties for a named group with the HandlerConfigLoader:
+It's very easy to load properties for a sub-configuration with the HandlerConfigLoader:
 
-e.g. to load process properties for myProcessOne:
+e.g. to load process properties for processOne:
 
     Properties processOneProps = new HandlerConfigLoader().loadPropertiesForSubGroup(configurationManager, "processes", "processOne');
 
-If you load properties this way, Chorus also takes care of applying any defaults set in a 'default' group if present
+If you load properties this way, Chorus also takes care of applying any defaults set in the 'default' sub-configuration
 
 
 
