@@ -1,3 +1,7 @@
+---
+layout: page
+title: Change List
+---
 
 ### Version 2.0.1 ###
         
