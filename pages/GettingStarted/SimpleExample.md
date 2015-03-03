@@ -9,7 +9,7 @@ There is a simple project with some Chorus examples, including the Calculator ex
 
 https://github.com/Chorus-bdd/Chorus-demo
 
-####Let's look at a very simple example from Chorus-demo, which tests a Calculator class.####
+####Let's look at a very simple example, which tests a Calculator class.####
 
 To make this work you'll just need to create and compile two classes, and write a .feature file:
 
@@ -19,26 +19,101 @@ To make this work you'll just need to create and compile two classes, and write 
 
 First here is the feature file:
 
-{% highlight gherkin %}
-{% github_sample Chorus-bdd/Chorus-demo/blob/master/src/demo/calculator/calculator.feature %}
-{% endhighlight %}
+    #File: Calculator.feature
+    Feature: Calculator
+        You should put a description of the feature under test here
+        In this test we'll check our Calculator can add two numbers
 
+    Scenario: Add two numbers
+        Given I have entered 50 into the calculator
+        And I have entered 70 into the calculator
+        When I press add
+        Then the result should be 120 on the screen
 
 Then the java handler class:
 
-   {% highlight java %}
-   {% github_sample Chorus-bdd/Chorus-demo/blob/master/src/demo/calculator/CalculatorHandler.java %}
-   {% endhighlight %}
+    //File: CalculatorHandler.java
+    package org.chorus.example;
 
+    import org.chorusbdd.chorus.annotations.*;
+    import org.chorusbdd.chorus.util.assertion.ChorusAssert;
+
+    @Handler("Calculator")
+    public class CalculatorHandler {
+
+        private Calculator calc = new Calculator();
+
+        @Step("I have entered ([0-9]*) into the calculator")
+        public void enterNumber(Double number) {
+            calc.enterNumber(number);
+        }
+
+        @Step("I press (.*)")
+        public void enterOperator(String operator) {
+            if ("add".equalsIgnoreCase(operator)) {
+                calc.press(Calculator.Operator.ADD);
+            }
+            else if ("subtract".equalsIgnoreCase(operator)) {
+                calc.press(Calculator.Operator.SUBTRACT);
+            }
+            else {
+                ChorusAssert.fail("Operator not recognised: " + operator);
+            }
+        }
+
+        @Step("the result should be ([0-9]*).*")
+        public void checkCalculation(double expectedResult) {
+            ChorusAssert.assertEquals(expectedResult, calc.getResult());
+        }
+    }
 
 Look here for some [notes on writing handler classes](/pages/Handlers/HandlerClasses)
 
 Here's the Calculator class itself:
 
+    package org.chorus.example;
 
-   {% highlight java %}
-   {% github_sample Chorus-bdd/Chorus-demo/blob/master/src/demo/calculator/Calculator.java %}
-   {% endhighlight %}
+    import java.util.Stack;
+
+    public class Calculator {
+
+        public enum Operator {
+            ADD, SUBTRACT, MULTIPLY, DIVIDE
+        }
+
+        private Stack<Double> stack = new Stack<Double>();
+
+        private double lastResult = 0;
+
+        public void enterNumber(Double number) {
+            stack.push(number);
+        }
+
+        public void press(Operator operator) {
+            double d2 = stack.pop();
+            double d1 = stack.pop();
+
+            switch (operator) {
+                case ADD:
+                    lastResult = d1 + d2;
+                    break;
+                case SUBTRACT:
+                    lastResult = d1 - d2;
+                    break;
+                case MULTIPLY:
+                    lastResult = d1 * d2;
+                    break;
+                case DIVIDE:
+                    lastResult = d1 / d2;
+                    break;
+            }
+        }
+
+        public double getResult() {
+            return lastResult;
+        }
+    }
+
 
 ## Running the test ##
 
