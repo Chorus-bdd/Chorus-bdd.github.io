@@ -14,6 +14,8 @@ The best way to get started is to [download and run the tests in the demo projec
 
 See here for [examples of running the Chorus interpreter](/pages/RunningChorus/RunningChorus)
 
+The [Simple Example](/pages/GettingStarted/SimpleExample) from the demo shows how to get a simple test running
+
 #### Here is a general overview of the process to write Chorus tests:
 
 1. Write tests in plain English (as .feature files [following the standard Gherkin syntax](https://github.com/cucumber/cucumber/wiki/Gherkin).
