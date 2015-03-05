@@ -21,18 +21,20 @@ With this added, the feature will be run once for each configuration name specif
 
 ###Using Configurations with Properties files###
 
-Some [built in handlers](/pages/BuiltInHandlers/BuiltInHandlers) use properties files for configuration.  
+Some [handler classes](/pages/Handlers/HandlerClasses) use properties files for configuration.
 
-When configurations are used you can prefix handler properties with the name of a configuration
+You can prefix properties with the name of a configuration.
 
-e.g You can set the property **handlerName.handlerProperty=value** to different values for config1 and config2 in the following way:
+e.g. for the remoting.port property:
 
-    configurations.config1.handlerName.handlerProperty=value
-    configurations.config2.handlerName.handlerProperty=value
+    configurations.confA.remoting.port=3456
+    configurations.confB.remoting.port=4567
 
-When a configuration runs, properties set for that configuration will override any properties where a configuration is not specified.
+When a configuration runs, Chorus will include any properties which start with `configuration.${configName}`
 
-i.e. the above properties would override the property set as **handler.handlerProperty=value**
+These properties may override default properties where a configuration was not specified.
+
+###Configuration-specific config files###
 
 An alternative way to manage config specific properties, if you don't want to use the configurations.configName prefix, is to put properties
 into a properties file which has -configName appended to the name - e.g. myFeature-myConfig.properties
