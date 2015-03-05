@@ -23,7 +23,7 @@ If you wish to restrict the features and scenarios which get run you can [tag sc
 
 The classpath should include:
 
-1. [[chorus.jar|Download]] (and if you are using Chorus' spring integration, [chorus-spring.jar](/pages/Resources/Download)
+1. [chorus.jar](/pages/Resources/Download) (and if you are using Chorus' spring integration, [chorus-spring.jar](/pages/Resources/Download)
 2. Any `@Handler` classes you wrote.
 3. Your classes under test
 
