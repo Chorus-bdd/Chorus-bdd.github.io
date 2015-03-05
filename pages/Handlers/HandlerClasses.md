@@ -4,8 +4,11 @@ title: Handler Classes
 ---
 
 A 'Handler' class is a Java class which is annotated with the `@Handler` annotation
+
+These classes provide the **[step definitions](https://cukes.info/step-definitions.html)** for Chorus
  
 Handler classes have methods annotated with the `@Step` annotation.
+
 These methods provide the Java code which executes for each step in your test scenarios
 
 These resources tell you more about Handler classes:
