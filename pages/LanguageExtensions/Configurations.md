@@ -32,7 +32,7 @@ e.g. for the remoting.port property:
 
 When a configuration runs, Chorus will include any properties which start with `configuration.${configName}`
 
-These properties may override default properties where a configuration was not specified.
+These properties may override properties where a configuration was not specified.
 
 ###Configuration-specific config files###
 
