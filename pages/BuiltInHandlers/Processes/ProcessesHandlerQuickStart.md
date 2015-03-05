@@ -162,7 +162,7 @@ It's a very common requirement to start a process using the Processes Handler an
 To do this you need to turn the jmx management service on for any processes you start (and have your processes export handler classes).
 this is accomplished simply by setting the remotingPort property
 
-    processes.publisher.remotingPort=1234t
+    processes.publisher.remotingPort=1234
 
 For more details on remoting see [Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)
 
