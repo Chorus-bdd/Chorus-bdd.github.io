@@ -11,7 +11,7 @@ Chorus tests can perform actions across components in a distributed architecture
 
 It can be very difficult to write full-system integration tests using conventional BDD techniques.
 
-This is particularly true in cases where there are several user interfaces involved, or for reactive systems in which components need to respond to external events.
+Systems with several user interfaces can be especially hard to test, as are reactive systems in which components need to respond to external events.
 
 At some point while testing a system like this, you're bound to need to do some of the following:
 
