@@ -99,7 +99,7 @@ These properties can be set in a chorus.properties file (or myfeature.properties
 <tr>
 	<td>scope</td>
 	<td>SCENARIO</td>
-	<td>The scope for the process, SCENARIO or FEATURE, feature scoped processes will be terminated at the end of the feature, scenario at the end of each scenario</td>
+	<td>The scope for the process, SCENARIO or FEATURE. Feature scoped processes will be terminated at the end of the feature, scenario scoped at the end of each scenario. Processes default to SCENARIO scope unless started during the special Feature-Start: scenario in which case they default to FEATURE scope</td>
 </tr>
 
 </table>

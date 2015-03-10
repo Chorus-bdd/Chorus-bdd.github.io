@@ -31,9 +31,9 @@ If your feature is myFeature.feature, these usually go into a myFeature.properti
 See [Handler Configuration](/pages/Handlers/HandlerConfiguration) for more details
 
 
-###Setting and retrieving variables in test steps###
+###Setting and retrieving variables in step definitions###
 
-Steps in your handler classes can access and set context variables, whether running locally or in a remote component over the network
+Step definitions in your handler classes can access and set context variables, whether running locally or in a remote component over the network
 
 Let's imagine I want to set a value for 'humidity' in one handler step, and retrieve it in another:
 
@@ -78,7 +78,7 @@ So you don't even have to supply a name for the context variable to do the follo
 
     Scenario: Set the current price
       When I get the price from pricing engine
-      And I set the value in the price spinner to ${lastValue}
+      And I set the value in the price spinner to ${lastResult}
       ... etc.
 
 

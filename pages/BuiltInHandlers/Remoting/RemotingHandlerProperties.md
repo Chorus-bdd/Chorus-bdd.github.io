@@ -46,4 +46,9 @@ These properties can be set in a chorus.properties file in the same directory as
 	<td>250</td>
 	<td>Wait time between each connection attempt</td>
 </tr>
+<tr>
+	<td>scope</td>
+	<td>SCENARIO</td>
+	<td>Whether remoting connection is closed at the end of the each scenario or the end of the feature. This defaults to FEATURE for connections established during the special Feature-Start: scenario</td>
+</tr>
 </table>

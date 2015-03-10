@@ -63,13 +63,15 @@ By default any processes started during a scenario will be terminated by Chorus 
 
 ###Setting a process to feature scope###
 
+Processes started within a scenario are usually stopped automatically at the end of a scenario. The process is then 'scenario scoped'
+
 If you wish to run a process throughout a feature, and reuse it between scenarios, you can configure it to be scoped at feature level, by setting the `scope` property:
 
 e.g. `processes.publisher.scope=feature`
 
 Then the process will not be stopped until feature end.
 
-If you do this it makes sense to start the process during Chorus' [Feature-Start:](/pages/LanguageExtensions/FeatureStartAndEnd) section, which is a special scenario which always gets run before any others in the feature.
+If you start a process during the special [Feature-Start: scenario](/pages/LanguageExtensions/FeatureStartAndEnd) then it will automatically be scoped to 'feature scope' unless you configure it otherwise.
 
 
 ###Waiting for a process to terminate###
@@ -150,6 +152,7 @@ If you want all your processes to log to the same directory, you could set a def
     processes.default.logDirectory=${user.dir}/test/chorus/logs
 
 Now all processes will log into the above directory, unless you override them with a configuration specific property.
+
 For full details on chorus properties files see [Handler Configuration](/pages/Handlers/HandlerConfiguration)
 
 ###Calling exported steps on the processes you start###
@@ -159,7 +162,7 @@ It's a very common requirement to start a process using the Processes Handler an
 To do this you need to turn the jmx management service on for any processes you start (and have your processes export handler classes).
 this is accomplished simply by setting the remotingPort property
 
-    processes.publisher.remotingPort=1234t
+    processes.publisher.remotingPort=1234
 
 For more details on remoting see [Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)
 
