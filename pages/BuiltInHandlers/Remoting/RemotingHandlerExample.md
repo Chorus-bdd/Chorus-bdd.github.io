@@ -3,31 +3,53 @@ layout: page
 title: Remoting Handler Example
 ---
 
-Chorus is a futuristic test framework, so let's go with a fun and futuristic example..
+We think Chorus is a futuristic test framework, so let's go with a futuristic example..
 
 Let's assume I'm trying to test the systems on a spacecraft.
 Various distributed components control aspects of the flight.  
 Unlike Battlestar Galactica, all those components are networked! 
 
-Let's see if we can use Chorus to test our spacecraft's battle readiness:
+Let's see if we can use Chorus to test our spacecraft's battle readiness.
 
 	Uses: Remoting
 
 	Feature: Cylon Base Ship Attack
-	
+
 	    Scenario:  Shields up when Cylon Ship Detected
 		    Given the spacecraft is undocked in navigation
 		    When a Cylon ship is detected in tactical
 		    Then shields go up in weaponsControl
 		    
 		
-This feature involves three distributed components:
+This feature uses the built in Remoting handler (`Uses: Remoting`) and the steps run on three distributed components:
 
 * the step ending **in navigation** will run on the **navigation** component 
 * the step ending **in tactical** will run on the **tactical** component
 * the step ending **in weaponsControl** will run on the **weaponsControl** component
 
-To call steps on each of these components we are using the built in Chorus 'Remoting' handler, `Uses: Remoting`
+Do you think it's a bit ugly to terminate each step with `in componentName`?
+That seems to embed knowledge of our technical architecture within the scenario
+
+Instead, you can use the `Remoting connect` [directive](/Directives.md) to connect components before the scenario starts:
+
+	Uses: Remoting
+
+	Feature: Cylon Base Ship Attack
+
+	    #! Remoting connect navigation, tactical, weaponsControl
+
+	    Scenario:  Shields up when Cylon Ship Detected
+		    Given the spacecraft is undocked
+		    When a Cylon ship is detected
+		    Then shields go up
+
+Isn't that cleaner?
+
+Now the steps don't specify the component they run on - we can leave Chorus to figure that out.
+Later we can even change which components define the steps without changing the scenario text.
+
+All we need to do is publish the step definitions from the three components:
+
 
 ### What do we need to do to make this work? ###
 
@@ -85,6 +107,8 @@ The properties file contains three properties which tell the Chorus interpreter 
 	remoting.navigation.connection=jmx:myserver1.myorg:18806
 	remoting.tactical.connection=jmx:myserver2.myorg:18807
 	remoting.weaponsControl.connection=jmx:myserver3.myorg:18808
+
+
 
 
 ### Some observations about the architecture ###
