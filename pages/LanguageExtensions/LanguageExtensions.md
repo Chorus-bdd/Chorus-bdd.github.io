@@ -3,7 +3,7 @@ layout: page
 title: Language Extensions
 ---
 
-Chorus provides several language extensions to Gherkin, which let you do more within .feature files
+Chorus provides several language extensions to [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin), which let you do more within .feature files
 
 * [Directives](/pages/LanguageExtensions/Directives) - Add technical directives to your feature files to influence how your tests get run
 * [Step Macro](/pages/LanguageExtensions/StepMacro) - Group some steps together and reuse them from multiple scenarios
