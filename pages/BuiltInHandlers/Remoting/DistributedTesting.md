@@ -13,8 +13,8 @@ those components over the network to run test steps.
 Usually when you run a test with Chorus, the interpreter will look for `@Handler` classes with step definitions in its local classpath.
 When you do distributed testing, these Handler classes can be in remote components instead
 
-Chorus provides a mechanism to export Handlers from a remote component - the class `ChorusHandlerJmxExporter`.
-This class can export step definitions from one or more Handler classes.
+Chorus provides a mechanism to export step definitions from a remote component - the class `ChorusHandlerJmxExporter`.
+This class can export steps from one or more Handler classes.
 
 You then use the `Remoting` Handler in your Chorus features to allow the interpreter to connect, so that it can discover and run the remote steps.
 
