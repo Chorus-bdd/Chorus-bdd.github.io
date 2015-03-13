@@ -29,18 +29,22 @@ You can then make use of the steps provided:
 n.b. Most often Context variables are set or updated by the step implementation methods in handler classes.
 The ChorusContext handler gives you the ability to view and manipulate these directly in your scenario.
 
-## Chorus Context with Feature-Start: ##
+## Loading variables into the context
 
-The ChorusContext handler has some special support for [Feature-Start: scenarios](/pages/LanguageExtensions/FeatureStartAndEnd)
+You can define [handler properties](/HandlerConfiguration) which will be loaded into the ChorusContext at the start of each Scenario
 
-It is often useful to pre-populate the context with variables during Feature-Start: and have these made available
-to all subsequent scenarios.
+These properties need to be prefixed with 'context.'
 
-Provided you are using ChorusContext handler for your feature (`Uses: Chorus Context`), the handler will take a snapshot of variable state
-at the end of the Feature-Start: section, and restore this snapshot into the context at the start of each Scenario.
+    context.myVariable=myValue
+    context.myVariable2=myValue2
 
-*n.b. this snapshot contains a shallow copy of the ChorusContext, so any mutable values it in will not have their values reset if changed during a scenario.
-If this is a concern, make sure you only store immutable values in the context*
+So that the Chorus Context handler will load these, you need to add `Uses: Chorus Context` at the top of your feature file
+
+At present these variables are loaded into the context as String values
+
+
+
+
 
 
 
