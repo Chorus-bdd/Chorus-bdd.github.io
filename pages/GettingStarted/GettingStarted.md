@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Getting Started
+section: Getting Started
+sectionIndex: 10
 ---
 
 

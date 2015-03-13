@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Simple Example
+section: Getting Started
+sectionIndex: 20
 ---
 
 ####Chorus Demo Project####
