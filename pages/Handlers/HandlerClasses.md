@@ -2,7 +2,7 @@
 layout: page
 title: Handler Classes
 section: Handlers
-sectionIndex: 20
+sectionIndex: 10
 ---
 
 A 'Handler' class is a Java class which is annotated with the `@Handler` annotation

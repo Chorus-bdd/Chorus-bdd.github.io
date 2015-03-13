@@ -19,11 +19,11 @@ title: Site Map
 
 ###Handlers
 
- * [Custom Configuration](/pages/Handlers/CustomConfiguration)
  * [Handler Classes](/pages/Handlers/HandlerClasses)
- * [Handler Configuration](/pages/Handlers/HandlerConfiguration)
- * [Handler Lifecycle](/pages/Handlers/HandlerLifecycle)
  * [Handler Quick Start](/pages/Handlers/HandlerQuickStart)
+ * [Handler Lifecycle](/pages/Handlers/HandlerLifecycle)
+ * [Custom Configuration](/pages/Handlers/CustomConfiguration)
+ * [Handler Configuration](/pages/Handlers/HandlerConfiguration)
 
 
 ###Built In Handlers

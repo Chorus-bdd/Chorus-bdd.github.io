@@ -2,7 +2,7 @@
 layout: page
 title: Custom Configuration
 section: Handlers
-sectionIndex: 10
+sectionIndex: 40
 ---
 
 If you write your own handler classes you can configure them with property files in the same manner as Chorus' built in handlers

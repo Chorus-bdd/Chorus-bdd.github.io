@@ -2,7 +2,7 @@
 layout: page
 title: Handler Lifecycle
 section: Handlers
-sectionIndex: 40
+sectionIndex: 30
 ---
 
 The default scope for a Handler class is SCENARIO.
