@@ -22,8 +22,8 @@ title: Site Map
  * [Handler Classes](/pages/Handlers/HandlerClasses)
  * [Handler Quick Start](/pages/Handlers/HandlerQuickStart)
  * [Handler Lifecycle](/pages/Handlers/HandlerLifecycle)
- * [Custom Configuration](/pages/Handlers/CustomConfiguration)
  * [Handler Configuration](/pages/Handlers/HandlerConfiguration)
+ * [Custom Configuration](/pages/Handlers/CustomConfiguration)
 
 
 ###Built In Handlers
