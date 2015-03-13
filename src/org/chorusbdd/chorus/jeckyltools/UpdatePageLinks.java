@@ -74,7 +74,11 @@ public class UpdatePageLinks {
         siteMapContents.append("title: Site Map\n");
         siteMapContents.append("---\n\n");
         for (Section s : sections.values()) {
-            siteMapContents.append("###").append(s.getSectionName());
+            siteMapContents.append("###");
+            if ( s.getLevel() > 1) {
+                siteMapContents.append("# &nbsp;&nbsp;&nbsp;");
+            }
+            siteMapContents.append(s.getSectionName());
             siteMapContents.write("\n\n");
             for ( Page p : s.getOrderedPages()) {
                 String fileName = p.getPath().getFileName().toString();

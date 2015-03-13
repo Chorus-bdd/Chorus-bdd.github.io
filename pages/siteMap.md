@@ -9,37 +9,10 @@ title: Site Map
  * [Simple Example](/pages/GettingStarted/SimpleExample)
 
 
-###Chorus Context
-
- * [Context Variables](/pages/BuiltInHandlers/ChorusContext/ChorusContext)
- * [Chorus Context Handler](/pages/BuiltInHandlers/ChorusContext/ChorusContextHandler)
-
-
-###Processes
-
- * [Processes Handler Properties](/pages/BuiltInHandlers/Processes/ProcessesHandlerProperties)
- * [Processes Handler Quick Start](/pages/BuiltInHandlers/Processes/ProcessesHandlerQuickStart)
- * [Starting Processes](/pages/BuiltInHandlers/Processes/StartingProcesses)
-
-
-###Remoting
-
- * [Distributed Testing](/pages/BuiltInHandlers/Remoting/DistributedTesting)
- * [Passes Within Annotation](/pages/BuiltInHandlers/Remoting/PassesWithinAnnotation)
- * [Remoting Handler Example](/pages/BuiltInHandlers/Remoting/RemotingHandlerExample)
- * [Remoting Handler Properties](/pages/BuiltInHandlers/Remoting/RemotingHandlerProperties)
- * [Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)
-
-
-###Timers
-
- * [Timers Handler](/pages/BuiltInHandlers/Timers/TimersHandler)
-
-
 ###Running Chorus
 
- * [Interpreter Parameters](/pages/RunningChorus/InterpreterParameters)
  * [Running Chorus](/pages/RunningChorus/RunningChorus)
+ * [Interpreter Parameters](/pages/RunningChorus/InterpreterParameters)
  * [JUnit Integration](/pages/RunningChorus/JUnitIntegration)
  * [Tagging Scenarios](/pages/RunningChorus/TaggingScenarios)
 
@@ -57,6 +30,33 @@ title: Site Map
 
  * [Built In Handlers](/pages/BuiltInHandlers/BuiltInHandlers)
  * [Built in Handler Steps](/pages/BuiltInHandlers/BuiltInHandlerSteps)
+
+
+#### &nbsp;&nbsp;&nbsp;Chorus Context
+
+ * [Context Variables](/pages/BuiltInHandlers/ChorusContext/ChorusContext)
+ * [Chorus Context Handler](/pages/BuiltInHandlers/ChorusContext/ChorusContextHandler)
+
+
+#### &nbsp;&nbsp;&nbsp;Processes
+
+ * [Starting Processes](/pages/BuiltInHandlers/Processes/StartingProcesses)
+ * [Processes Handler Quick Start](/pages/BuiltInHandlers/Processes/ProcessesHandlerQuickStart)
+ * [Processes Handler Properties](/pages/BuiltInHandlers/Processes/ProcessesHandlerProperties)
+
+
+#### &nbsp;&nbsp;&nbsp;Remoting
+
+ * [Distributed Testing](/pages/BuiltInHandlers/Remoting/DistributedTesting)
+ * [Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)
+ * [Remoting Handler Example](/pages/BuiltInHandlers/Remoting/RemotingHandlerExample)
+ * [Remoting Handler Properties](/pages/BuiltInHandlers/Remoting/RemotingHandlerProperties)
+ * [Passes Within Annotation](/pages/BuiltInHandlers/Remoting/PassesWithinAnnotation)
+
+
+#### &nbsp;&nbsp;&nbsp;Timers
+
+ * [Timers Handler](/pages/BuiltInHandlers/Timers/TimersHandler)
 
 
 ###Language Extensions

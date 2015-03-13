@@ -2,7 +2,7 @@
 layout: page
 title: Interpreter Parameters
 section: Running Chorus
-sectionIndex: 10
+sectionIndex: 20
 ---
 
 When running the chorus interpreter, the following parameters are supported. 

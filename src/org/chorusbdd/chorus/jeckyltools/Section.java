@@ -33,6 +33,10 @@ public class Section {
         return sectionName;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
     private void sortPages() {
         Collections.sort(pages, new Comparator<Page>() {
             @Override

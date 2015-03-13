@@ -31,7 +31,7 @@ The ChorusContext handler gives you the ability to view and manipulate these dir
 
 ## Loading variables into the context
 
-You can define [handler properties](/HandlerConfiguration) which will be loaded into the ChorusContext at the start of each Scenario
+You can define [handler properties](/pages/Handlers/HandlerConfiguration) which will be loaded into the ChorusContext at the start of each Scenario
 
 These properties need to be prefixed with 'context.'
 
