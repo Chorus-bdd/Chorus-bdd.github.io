@@ -18,18 +18,17 @@ This class can export steps from one or more Handler classes.
 
 You then use the `Remoting` Handler in your Chorus features to allow the interpreter to connect, so that it can discover and run the remote steps.
 
-To do this, all you need to do is add `Uses: Remoting` to your feature file, and add config properties tell Chorus the network addresses of your components.
+See also:
+
+[Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)  
+[Remoting Handler Example](/pages/BuiltInHandlers/Remoting/RemotingHandlerExample)
 
 ### What network protocol is used?
 
 The ChorusHandlerJmxExporter uses the standard Java platform JMX container.
 
 A Chorus exporter bean is registered in the container, and this can be located by the Chorus interpreter using the RMI/IIOP protocol.
-The exporter bean provides remote procedure calls for the Chorus interpreter to discover and execute the remote steps.
-
-See  
-[Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)  
-[Remoting Handler Example](/pages/BuiltInHandlers/Remoting/RemotingHandlerExample)
+The exporter bean handles remote procedure calls which allow the Chorus interpreter to discover and execute the remote steps.
 
 **ChorusContext**
 
