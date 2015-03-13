@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Directives
+section: Language Extensions
+sectionIndex: 20
 ---
 
 While testing a complex system, you often have to carry out technical actions in order to allow the tests to run.

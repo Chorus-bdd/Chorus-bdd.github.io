@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Download
+section: Resources
+sectionIndex: 20
 ---
 
 ## Getting Chorus

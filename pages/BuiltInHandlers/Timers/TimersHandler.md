@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Timers Handler
+section: Timers
+sectionIndex: 10
 ---
 
 Chorus provides a [built in handler](/pages/BuiltInHandlers/BuiltInHandlers) called `Timers`

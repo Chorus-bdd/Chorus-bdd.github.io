@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Handler Configuration
+section: Handlers
+sectionIndex: 30
 ---
 
 Sometimes handler classes need configuration properties.

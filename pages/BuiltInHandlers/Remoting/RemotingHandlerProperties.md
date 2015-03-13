@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Remoting Handler Properties
+section: Remoting
+sectionIndex: 40
 ---
 
 The remoting handler allows you to set the following properties for each of your remote components

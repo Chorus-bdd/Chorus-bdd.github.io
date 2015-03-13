@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Language Extensions
+section: Language Extensions
+sectionIndex: 10
 ---
 
 Chorus provides several language extensions to [Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin), which let you do more within .feature files

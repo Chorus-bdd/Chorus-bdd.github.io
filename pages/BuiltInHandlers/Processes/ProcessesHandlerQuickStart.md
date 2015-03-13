@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Processes Handler Quick Start
+section: Processes
+sectionIndex: 20
 ---
 
 Let's imagine you are writing a feature called Publisher Test

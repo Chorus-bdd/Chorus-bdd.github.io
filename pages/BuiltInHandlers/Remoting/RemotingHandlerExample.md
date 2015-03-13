@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Remoting Handler Example
+section: Remoting
+sectionIndex: 30
 ---
 
 We think Chorus is a futuristic test framework, so let's go with a futuristic example..

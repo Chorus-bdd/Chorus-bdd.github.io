@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Configurations
+section: Language Extensions
+sectionIndex: 70
 ---
 
 Sometimes it is useful to run the same feature several times using different configurations.

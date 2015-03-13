@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Feature Start and End
+section: Language Extensions
+sectionIndex: 40
 ---
 
 In an ideal world, all scenario should start from a clean slate with no previous set up performed.

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Remoting Handler Quick Start
+section: Remoting
+sectionIndex: 50
 ---
 
 Let's pretend we have an integration test environment all ready to run some tests. We wish to write a feature which tests components are interacting in the way we expect.

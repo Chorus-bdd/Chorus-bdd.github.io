@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Step Macro
+section: Language Extensions
+sectionIndex: 30
 ---
 
 There are times when you find yourself repeating yourself when writing features

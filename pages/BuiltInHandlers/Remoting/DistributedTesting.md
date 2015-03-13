@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Distributed Testing
+section: Remoting
+sectionIndex: 10
 ---
 
 Chorus has some unique capabilities for distributed testing:

@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Running Chorus
+section: Running Chorus
+sectionIndex: 20
 ---
 
 The Chorus interpreter can be run as a standard Java process.

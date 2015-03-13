@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Chorus Context Handler
+section: Chorus Context
+sectionIndex: 20
 ---
 
 Chorus provides a [built in handler](/pages/BuiltInHandlers/BuiltInHandlers) called `ChorusContext`

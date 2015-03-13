@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Processes Handler Properties
+section: Processes
+sectionIndex: 10
 ---
 
 The processes handler allows you to set the following properties for each of your processes

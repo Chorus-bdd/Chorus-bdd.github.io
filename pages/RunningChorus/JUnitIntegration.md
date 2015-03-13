@@ -1,6 +1,8 @@
 ---
 layout: page
 title: JUnit Integration
+section: Running Chorus
+sectionIndex: 30
 ---
 
 Chorus JUnit integration enables you to run your Chorus features as a suite of JUnit tests.

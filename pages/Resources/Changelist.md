@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Change List
+section: Resources
+sectionIndex: 10
 ---
 
 ### Version 2.0.1 ###

@@ -79,7 +79,7 @@ public class UpdatePageLinks {
             for ( Page p : s.getOrderedPages()) {
                 String fileName = p.getPath().getFileName().toString();
                 fileName = fileName.split(".md")[0];
-                siteMapContents.append("[").append(p.getTitle()).append("](/").append(fileName).append(")\n");
+                siteMapContents.append(" * [").append(p.getTitle()).append("](/").append(fileName).append(")\n");
             }
             siteMapContents.append("\n\n");
         }

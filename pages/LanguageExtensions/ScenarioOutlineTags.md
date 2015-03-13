@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Scenario Outline Tags
+section: Language Extensions
+sectionIndex: 60
 ---
 
 In Chorus you can [tag features and scenarios](/pages/RunningChorus/TaggingScenarios) and use the tags to run a subset of your tests

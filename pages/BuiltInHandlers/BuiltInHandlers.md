@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Built In Handlers
+section: Built In Handlers
+sectionIndex: 10
 ---
 
 The Chorus interpreter supplies some built in [handler classes](/pages/Handlers/HandlerClasses) of its own to provide some extra capabilities:
