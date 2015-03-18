@@ -38,7 +38,7 @@ These properties may override properties where a configuration was not specified
 
 ###Configuration-specific config files###
 
-An alternative way to manage config specific properties, if you don't want to use the configurations.configName prefix, is to put properties
+An alternative way to manage config-specific properties, if you don't want to use the configurations.configName prefix, is to put properties
 into a properties file which has -configName appended to the name - e.g. myFeature-myConfig.properties
 
 See [Handler Configuration](/pages/Handlers/HandlerConfiguration) for more details

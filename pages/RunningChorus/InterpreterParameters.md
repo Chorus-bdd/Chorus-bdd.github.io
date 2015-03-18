@@ -111,6 +111,7 @@ Where a parameter value is set as a System property this will generally override
     <td>-profile</td>
     <td></td>
     <td>-p myProfile</td>
-    <td>The profile to use for this chorus test suite, this can be used to select configuration properties prefixed by profile.profileName</td>
+    <td>The profile to use when running Chorus. This can be used to change configuration.
+    Configuration properties may be included if they are prefixed by profile.profileName</td>
 </tr>
 </table>

@@ -23,6 +23,7 @@ title: Site Map
  * [Handler Quick Start](/pages/Handlers/HandlerQuickStart)
  * [Handler Lifecycle](/pages/Handlers/HandlerLifecycle)
  * [Handler Configuration](/pages/Handlers/HandlerConfiguration)
+ * [Profiles](/pages/Handlers/Profiles)
  * [Custom Configuration](/pages/Handlers/CustomConfiguration)
 
 
