@@ -32,7 +32,7 @@ This feature uses the built in Remoting handler (`Uses: Remoting`) and the steps
 Do you think it's a bit ugly to terminate each step with `in componentName`?
 That seems to embed knowledge of our technical architecture within the scenario
 
-Instead, you can use the `Remoting connect` [directive](/Directives.md) to connect components before the scenario starts:
+Instead, you can use the `Remoting connect` [directive](/pages/LanguageExtensions/Directives) to connect components before the scenario starts:
 
 	Uses: Remoting
 
