@@ -17,6 +17,7 @@ These resources tell you more about Handler classes:
 * [Handler Class Quick Start](/pages/Handlers/HandlerQuickStart)
 * [Handler Configuration](/pages/Handlers/HandlerConfiguration)
 * [Custom Configuration](/pages/Handlers/CustomConfiguration)
+* [Profiles](/pages/Handlers/Profiles)
 * [Handler Lifecycle](/pages/Handlers/HandlerLifecycle)
 * [Built In Handlers](/pages/BuiltInHandlers/BuiltInHandlers)
 
