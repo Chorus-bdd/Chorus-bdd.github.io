@@ -7,7 +7,7 @@ sectionIndex: 30
 
 We think Chorus is a futuristic test framework, so let's go with a futuristic example..
 
-Let's assume I'm trying to test the systems on a spacecraft.
+Let's assume we're trying to test the systems on a spacecraft.
 Various distributed components control aspects of the flight.  
 Unlike Battlestar Galactica, all those components are networked! 
 
@@ -48,7 +48,7 @@ Instead, you can use the `Remoting connect` [directive](/pages/LanguageExtension
 Isn't that cleaner?
 
 Now the steps don't specify the component they run on - we can leave Chorus to figure that out.
-Later we can even change which components define the steps without changing the scenario text.
+Later we can change which components define the steps without changing the scenario text.
 
 All we need to do is publish the step definitions from the three components:
 
@@ -65,7 +65,7 @@ a) Write a NavigationHandler for the navigation process, and export it:
 		
 		@Step("the spacecraft is undocked")
 		public void undock() {
-			... publish a message to simulate undocking
+			... change state to simulate undocking and publish a message
 		}
 	}
 	
@@ -73,16 +73,20 @@ a) Write a NavigationHandler for the navigation process, and export it:
 	new ChorusHandlerJMXExporter(new NavigationHandler()).export();
 	...
 
-b) Do the same for tactical:
+b) Do the same for Tactical component:
 
 	@Handler("Tactical")
 	public class TacticalHandler {
 
 		@Step("a Cylon ship is detected")
 		public void setBaseShipDetected() {
-			... publish a message to simulate detecting a Cylon ship
+			... change state to simulate ship detection and publish a message
 		}
 	}
+
+	#File: Tactical.java
+    new ChorusHandlerJMXExporter(new TacticalHandler()).export();
+    ...
 
 c) For weapons control, we can use the `@PassesWithin` annotation to allow up to 1 second for the shields to go up after the messages are sent. 
 
@@ -96,9 +100,13 @@ c) For weapons control, we can use the `@PassesWithin` annotation to allow up to
 		}
 	}
 
+    #File: WeaponsControl.java
+    new ChorusHandlerJMXExporter(new WeaponsControlHandler()).export();
+    ...
+
 ### Getting this to run ###
 
-First we need to export the handlers from each of our components, and start up all the components in our space ship simulation environment (UAT). Then, in order to run the tests, we need to provide a feature file, and a properties file next to the .feature file which will tell the chorus interpreter how to connect to these remote components. 
+First we need start up all the components in our simulation environment (UAT). Then, in order to run the tests, we need to provide a feature file, and a properties file next to the .feature file which will tell the chorus interpreter how to connect to these remote components.
 
 What we will end up with is the feature file (e.g. cylonBaseShipAttack.feature) next to a properties file (e.g. cylonBaseShipAttack.properties). 
 
@@ -115,10 +123,22 @@ The properties file contains three properties which tell the Chorus interpreter 
 
 ### Some observations about the architecture ###
 
-This is a real-time distributed system we are testing and we assume there are message feeds between each of the components. We assume that the Weapons Control component is subscribing to messages published by the navigation and tactical computers in our integration testing environment. It uses these message feeds to make strategic responses to certain situations (e.g. shields up). 
+This is a real-time distributed system we are testing and we assume there are message feeds between each of the components.
 
-In our integration testing environment, we can test these responses are correct by sending a message to the navigation and tactical components, and asking them to temporarily change their published state. i.e. We are asking these components to publish mock data, to simulate a real condition occurring, so that we can test the outcome in the weapons control process.
+The Weapons Control component is subscribing to messages published by the navigation and tactical computers in our
+integration testing environment.
 
-Since we are using message feeds there are latencies involved. The messages from the navigation and tactical components may take some time to arrive at weaponsControl. That's why we have used the [@PassesWithin](/pages/BuiltInHandlers/Remoting/PassesWithinAnnotation) annotation in the weapons control step. This polls the method for a limited period, waiting for the assertion (shields are up) to be satisfied, instead of failing immediately if there is a small delay.
+It uses these message feeds to make responses to certain situations (e.g. shields up).
+
+In our integration testing environment, we can test these responses are correct by sending a message to the navigation
+and tactical components, and asking them to simulate entering a new state (and send appropriate messages).
+We are asking these components to publish mock data, to simulate a real condition occurring,
+so that we can test the outcome in the weapons control process.
+
+Since we are using message feeds there are latencies involved.
+The messages from the navigation and tactical components may take some time to arrive at weaponsControl.
+That's why we have used the [@PassesWithin](/pages/BuiltInHandlers/Remoting/PassesWithinAnnotation) annotation in the weapons control step.
+This polls the method for a limited period, waiting for the assertion (shields are up) to be satisfied, instead of failing
+immediately if there is a small delay.
 
    
