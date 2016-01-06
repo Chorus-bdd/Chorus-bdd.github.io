@@ -14,7 +14,7 @@ If you are using maven for your project, the dependency would be declared as fol
     <dependency>
       <groupId>org.chorusbdd</groupId>
       <artifactId>chorus</artifactId>
-      <version>2.0.1</version>
+      <version>2.0.2</version>
     </dependency>
 
 and for chorus-spring
@@ -22,7 +22,7 @@ and for chorus-spring
     <dependency>
       <groupId>org.chorusbdd</groupId>
       <artifactId>chorus-spring</artifactId>
-      <version>2.0.1</version>
+      <version>2.0.2</version>
     </dependency>
     
 A change list for the releases is here:
@@ -31,26 +31,18 @@ A change list for the releases is here:
 
 Alternatively, download links are below:
 
-###2.0.1###
 
-[chorus-2.0.1.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus/2.0.0/chorus-2.0.0.jar)
+###2.0.2###
 
-[chorus-2.0.1-sources.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus/2.0.0/chorus-2.0.0-sources.jar)
+[chorus-2.0.2.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus/2.0.2/chorus-2.0.2.jar)
 
-[chorus-spring-2.0.1.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus-spring/2.0.0/chorus-spring-2.0.0.jar)
+[chorus-2.0.2-sources.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus/2.0.2/chorus-2.0.2-sources.jar)
 
-[chorus-spring-2.0.1-sources.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus-spring/2.0.0/chorus-spring-2.0.0-sources.jar)
+[chorus-spring-2.0.2.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus-spring/2.0.2/chorus-spring-2.0.2.jar)
+
+[chorus-spring-2.0.2-sources.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus-spring/2.0.2/chorus-spring-2.0.2-sources.jar)
 
 
-###2.0.0###
-
-[chorus-2.0.0.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus/2.0.0/chorus-2.0.0.jar)
-
-[chorus-2.0.0-sources.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus/2.0.0/chorus-2.0.0-sources.jar)
-
-[chorus-spring-2.0.0.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus-spring/2.0.0/chorus-spring-2.0.0.jar)
-
-[chorus-spring-2.0.0-sources.jar](http://search.maven.org/remotecontent?filepath=org/chorusbdd/chorus-spring/2.0.0/chorus-spring-2.0.0-sources.jar)
 
 
 
