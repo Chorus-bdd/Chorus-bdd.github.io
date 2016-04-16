@@ -3,38 +3,25 @@ layout: page
 title: What is Chorus?
 ---
 
-Chorus is a BDD testing tool which makes it easier to write tests for complex systems
+Chorus is a BDD (Behaviour Driven Development) testing framework targeting distributed systems
 
-Chorus tests can perform actions across components in a distributed architecture.
+It can integration test systems with microservice-based architectures.
 
-## Why is Chorus needed?
+Testing systems which are decomposed into multiple services can be tricky. The features being tested tend to require collaboration between
+several components.
 
-It can be very difficult to write full-system integration tests using conventional BDD techniques.
+While running a test scenario, Chorus can connect to each of the components in a testing environment to run test steps, and share test state.
 
-Systems with several user interfaces can be especially hard to test, as are reactive systems in which components need to respond to external events.
+Chorus is also a capable BDD test interpreter for single component testing and has some special capabilities over and above those of other BDD interpreters
 
-At some point while testing a system like this, you're bound to need to do some of the following:
-
-* Connect to a remote component to perform an action
-* Trigger a mock message to be published from one component to another
-* Start a process and check it's output or interact with it while it is running
-* Bootstrap or tear down the environment used for integration testing
-* Run a feature more than once in different configurations
-* Run your tests using profiles for different testing environments
-
-Chorus can help with these things
 
 ## How does Chorus work
 
 Chorus works as a test interpreter for standard Cucumber-style BDD tests written in [Gherkin](https://cukes.info/gherkin.html)
-
 On top of this, it provides several [language extensions](/pages/LanguageExtensions/LanguageExtensions) to Gherkin
 
-One of the most important language extensions is the ability to [embed 'Directives' in your feature files](/pages/LanguageExtensions/Directives)
-Directives can provide technical instructions which indicate how a test should run, but keep these separate from the business language.
-
-Chorus provides some built in directives, but if these are not sufficient you can easily supply [handler classes](/pages/Handlers/HandlerClasses) to implement your own
-
+Chorus also provides some [Built in Test Steps](/pages/BuiltInHandlers/BuiltInHandlers)
+The can be used in your test features to accomplish useful things, such as starting and stopping local processes, and connecting to remote processes to discover and run test steps
 
 
 

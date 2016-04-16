@@ -9,10 +9,9 @@ While testing a complex system, you often have to carry out technical actions in
 
 For example, you may need to start a process, log in to a server and run a script, or even do something to bootstrap or tear down a testing environment.
 
-This is a problem since you don't want technical actions to clutter up the tests in your feature files.
+Including these technical concerns as test steps can make the scenarios less expressive. Features are supposed to be written by a BA (ideally), and they should  describe requirements in business language, without technical implementation details getting in the way.
 
-Features are supposed to be written by a BA (ideally), and for maximum clarity they should be decoupled from technical or platform considerations.
-Chorus allows the BA to write such tests, and the developer to annotate them with Directives later.
+Directives in Chorus allows the BA to write the tests, and the developer to annotate them with technical Directives later.
 
 ###What are Directives?###
 
