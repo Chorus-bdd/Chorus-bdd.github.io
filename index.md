@@ -12,7 +12,7 @@ several components.
 
 While running a test scenario, Chorus can connect to each of the components in a testing environment to run test steps, and share test state.
 
-Chorus is also a capable BDD test interpreter for single component testing and has some special capabilities over and above those of other BDD interpreters
+Chorus is also a capable BDD test interpreter for single component testing
 
 
 ## How does Chorus work
@@ -23,6 +23,9 @@ On top of this, it provides several [language extensions](/pages/LanguageExtensi
 Chorus also provides some [Built in Test Steps](/pages/BuiltInHandlers/BuiltInHandlers)
 The can be used in your test features to accomplish useful things, such as starting and stopping local processes, and connecting to remote processes to discover and run test steps
 
+Chorus is a java-based framework and at present it can connect to java (or JVM) components only.
+We are planning to extend it so that it can connect to components written in other languages.
+If you'd like to help with this, get in touch!
 
 
 
