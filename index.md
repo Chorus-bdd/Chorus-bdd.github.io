@@ -7,12 +7,10 @@ Chorus is a BDD (Behaviour Driven Development) testing framework for microservic
 
 It can be used for integration testing on systems with microservice-based architectures.
 
-Testing systems which are decomposed into multiple services can be tricky. The features being tested tend to require collaboration between
-several components.
+![Chorus Overview](/public/ChorusOverview.png)
+
 
 While running a test scenario, Chorus can connect to each of the components in a testing environment to run test steps, and share test state.
-
-Chorus is also a capable BDD test interpreter for single component testing
 
 
 ## How does Chorus work
