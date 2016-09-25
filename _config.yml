@@ -23,7 +23,7 @@ author:
 version:          2.1.0
 
 github:
-  repo:           https://github.com/Chorus-bdd/
+  repo:           https://github.com/Chorus-bdd/Chorus
 
 gems: [jekyll_github_sample]
 
