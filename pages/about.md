@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-Chorus is an open source project [hosted on Github](https://github.com/Chorus-bdd/)
+Chorus is an open source project [hosted on Github](https://github.com/Chorus-bdd/Chorus)
 
 Chorus is licensed under the MIT license
 
