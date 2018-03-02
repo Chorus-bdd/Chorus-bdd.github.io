@@ -10,7 +10,8 @@ The Chorus interpreter is a Java project.
 
 To run it, you need just the chorus.jar - see the [Download Page for this](/pages/Resources/Download)
 
-Chorus requires jdk 1.7+
+Chorus 2.x requires jdk 1.7+
+Chorus 3.x requires jdk 1.8+
 
 The best way to get started is to [download and run the tests in the demo project](https://github.com/Chorus-bdd/Chorus-demo)
 
