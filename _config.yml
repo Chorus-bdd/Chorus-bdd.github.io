@@ -9,7 +9,7 @@ permalink:        pretty
 title:            Chorus BDD
 tagline:          'BDD testing for distributed systems'
 description:      'BDD testing for distributed systems'
-url:              https://www.chorus-bdd.org
+url:              https://github.com/Chorus-bdd
 baseurl:          /
 
 author:
