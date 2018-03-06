@@ -10,7 +10,7 @@ title:            Chorus BDD
 tagline:          'BDD testing for distributed systems'
 description:      'BDD testing for distributed systems'
 url:              https://www.chorus-bdd.github.io/Chorus-bdd/
-baseurl:          /
+baseurl:          /Chorus-bdd/
 
 author:
   name:           'Chorus BDD'
