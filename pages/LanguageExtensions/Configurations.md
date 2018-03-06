@@ -21,7 +21,7 @@ With this added, the feature will be run once for each configuration name specif
 
 ##How to use configurations##
 
-###Using Configurations with Properties files###
+### Using Configurations with Properties files
 
 Some [handler classes](/pages/Handlers/HandlerClasses) use properties files for configuration.
 
@@ -36,7 +36,7 @@ When a configuration runs, Chorus will include any properties which start with `
 
 These properties may override properties where a configuration was not specified.
 
-###Configuration-specific config files###
+### Configuration-specific config files
 
 An alternative way to manage config-specific properties, if you don't want to use the configurations.configName prefix, is to put properties
 into a properties file which has -configName appended to the name - e.g. myFeature-myConfig.properties
@@ -44,7 +44,7 @@ into a properties file which has -configName appended to the name - e.g. myFeatu
 See [Handler Configuration](/pages/Handlers/HandlerConfiguration) for more details
 
 
-###Using Configurations in a Handler class###
+### Using Configurations in a Handler class
 
 From a Handler class you can find out which configuration is currently running  
 You can then write handler logic which is configuration specific.
@@ -63,7 +63,7 @@ Use a FeatureToken field and `@ChorusResource` annotation in the following way:
         }
 
 
-###Using Configurations with Chorus-Spring###
+### Using Configurations with Chorus-Spring
 
 If you are using chorus-spring, you can add the `@ContextConfiguration` annotation to your handler class.  
 This annotation lets you name an xml file containing Spring bean defintions.  

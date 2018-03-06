@@ -5,13 +5,13 @@ section: Getting Started
 sectionIndex: 20
 ---
 
-####Chorus Demo Project####
+### #Chorus Demo Project#
 
 There is a simple project with some Chorus examples, including the Calculator example below, at:
 
 https://github.com/Chorus-bdd/Chorus-demo
 
-####Let's look at a very simple example, which tests a Calculator class.####
+### #Let's look at a very simple example, which tests a Calculator class.#
 
 To make this work you'll just need to create and compile two classes, and write a .feature file:
 

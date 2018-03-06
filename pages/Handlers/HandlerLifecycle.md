@@ -16,7 +16,7 @@ To cater for this, Chorus supports the concept of FEATURE Scope
 Declaring a Handler as `Feature` scoped will ensure that only one Handler instance is created during a feature.
 This instance is then used by all the scenarios that run.
 
-###How to set the scope for a Handler class###
+### How to set the scope for a Handler class
 
 To declare a Handler as Scenario scoped, you don't need to do anything, since this is the default scope.
 To declare a Handler class Feature scoped, add the scope to the `@Handler` annotation as follows:
@@ -27,7 +27,7 @@ To declare a Handler class Feature scoped, add the scope to the `@Handler` annot
     }
     
 
-###When is this useful?###
+### When is this useful?
 
 In some situations, where there is expensive initialization or tear down to do as part of a feature,
 it makes sense to do this work once rather than before every scenarios.
@@ -37,7 +37,7 @@ An example might be starting up a process or establishing a connection and loggi
 The Handler scoping mechanism is especially useful in conjunction with Chorus' [Feature-Start and Feature-End scenarios](/pages/LanguageExtensions/FeatureStartAndEnd)
 
 
-###Lifecycle Methods on Handler classes###
+### Lifecycle Methods on Handler classes
 
 Chorus provides two annotations which can be used on methods of your Handler classes in order to perform setup and tear down work 
 at either Scenario or Feature scope.

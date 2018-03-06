@@ -24,7 +24,7 @@ The test gets run once for each row
             | value1     |
             | value2     |
 
-###Tagging Examples###
+### Tagging Examples
 
 Sometimes you may want to create a test suite which runs a subset of the examples in the table.
 To facilitate this, Chorus extends this to allow you to add tags to individual rows in the example table.
@@ -41,7 +41,7 @@ This can be used to allow you to execute a subset of the scenarios by specifying
 Now if I run chorus with -t @MyTag, only the first example (value1) will get run
 
 
-###Name of Scenario-Outline: Scenarios###
+### Name of Scenario-Outline: Scenarios
 
 To make Chorus' output clearer, the value from the first variable column will be appended to the name of each scenario generated from the table.  
 To make this convention clearer, you may wish to define the first column as 'Name'.  

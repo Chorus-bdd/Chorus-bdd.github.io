@@ -23,7 +23,7 @@ e.g.
          
 In the above example, the step `I wait for 2 seconds .*` would be matched by Timers handler
 
-###Consider the @PassesWithin annotation###
+### Consider the @PassesWithin annotation
 
 In most cases, where you are considering using a sleep, you would be better off using Chrous' @PassesWithin annotation.
 Using @PassesWithin you can annotate a step method to run repeatedly for a period of time, waiting for assertions to be satisfied.

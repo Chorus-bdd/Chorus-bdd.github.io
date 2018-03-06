@@ -35,7 +35,7 @@ This would be `@Handler("Simple Feature")`
 
     }
 
-### Naming extra Handlers with `Uses:` ###
+###  Naming extra Handlers with `Uses:` 
 
 You can also add the `Uses:` keyword to the top of your feature files to name other handler classes.
 
@@ -55,7 +55,7 @@ This mechanism enables you to share handler classes between features.
 
 n.b. the `Uses:` keyword is a Chorus extension, it is not part of the original Gherkin syntax
 
-### Step methods ###
+###  Step methods 
 
 Handler classes contains methods annotated with the @Step annotation
 The `@Step` annotation has a text value which is matched against your scenario steps
@@ -104,7 +104,7 @@ Below both of the step method arguments are of type 'int', so Chorus will try to
         }
 
 
-### Checking conditions and failing steps ###
+###  Checking conditions and failing steps 
 
 If you want to fail a step, simply throw an exception from the step method
 
@@ -117,7 +117,7 @@ The recommended way to do this is to use the ChorusAssert or JUnit Assert method
         }
 
 
-### Marking steps Pending ###
+###  Marking steps Pending 
 
 You can mark a step as pending, indicating that you will provide an implementation later:
 
@@ -132,7 +132,7 @@ You can mark a step as pending, indicating that you will provide an implementati
         }
 
 
-### Returning results from step methods ###
+###  Returning results from step methods 
 
 If you return a value from a step method, this value will be visible in the Chorus output
 
@@ -142,7 +142,7 @@ If you return a value from a step method, this value will be visible in the Chor
         }
 
 
-### Handling latency when testing conditions ###
+###  Handling latency when testing conditions 
 
 When testing distributed systems, you often need to allow some time for a condition to be satisfied
 In this case, you can use the @PassesWithin annotation, to allow a certain amount of time within which your Assertion should succeed.
@@ -150,7 +150,7 @@ In this case, you can use the @PassesWithin annotation, to allow a certain amoun
 See [Passes Within Annotation](/pages/BuiltInHandlers/Remoting/PassesWithinAnnotation)
 
 
-### Handler Lifecycle ###
+###  Handler Lifecycle 
 
 Handler classes are usually scoped to a scenario. At the start of each scenario, all relevant handlers are instantiated.
 You can annotate a method with `@Initialize` if you want to do some preparatory setup.
@@ -174,7 +174,7 @@ You can add a method to your handler which is annotated `@Destroy` if you need t
 
 It is also [possible to scope a Handler class to Feature scope](/pages/Handlers/HandlerLifecycle)
 
-### Accessing interpreter context ###
+###  Accessing interpreter context 
 
 There are times when you need access to some information from the interpreter in your handler class.
 Chorus provides a `ChorusResource` annotation which you can use on a Handler class field
@@ -196,7 +196,7 @@ This field will then have its value set at the start of each scenario:
             ScenarioToken scenarioToken;    //provides extra metadata about the running scenario
         }
 
-### Storing values in ChorusContext ###
+###  Storing values in ChorusContext 
 
 You can store values in the ChorusContext in step methods.
 These values are accessible ChorusContext to subsequent step methods, whether locally or remotely executed:

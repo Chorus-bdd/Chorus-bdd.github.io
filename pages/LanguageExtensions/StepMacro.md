@@ -36,7 +36,7 @@ This would solve the problem, but I've had to duplicate the entire step sequence
 What I'd like is a way to reuse my login steps without repeating myself.  
 This is where step macros come in.
 
-###Removing Duplication with a Step Macro###
+### Removing Duplication with a Step Macro
 
 To express the same thing with a Step Macro I could define a step macro in my .feature file.  
 Then I can refer to the macro in a step from my main scenario:
@@ -58,7 +58,7 @@ Then, for each scenario step, it first tries to match the step text to any step 
 If a matching macro is discovered then the step macro steps are inserted as child steps of the scenario step
 If any macro steps fail, then the scenario step is considered to have failed
 
-###Referencing a Step Macro from multiple features###
+### Referencing a Step Macro from multiple features
 
 If you want to use a step macro across multiple features, you can place it in a separate file with the extension `.stepmacro`: 
 
@@ -84,7 +84,7 @@ If you want to use a step macro across multiple features, you can place it in a 
             Given I log in as user Nick with password myPassword
             Then the account summary link is visible on homepage
             
-###Step Macro FAQ###
+### Step Macro FAQ
 
 Q: Can I reference another step macro from within a step macro?
 A: Of course

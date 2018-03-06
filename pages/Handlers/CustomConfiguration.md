@@ -9,7 +9,7 @@ If you write your own handler classes you can configure them with property files
 
 You can use the utility `HandlerConfigLoader` to load properties from the standard locations detailed in [HandlerConfiguration](/pages/Handlers/HandlerConfiguration)
 
-### ConfigurationManager ###
+###  ConfigurationManager 
 
 The properties are loaded using Chorus' ConfigurationManager subsystem.
 You need to obtain this by annotating a field in your Handler class:
@@ -21,7 +21,7 @@ You need to obtain this by annotating a field in your Handler class:
 When Chorus initializes your handlers for a test feature it will inject the ConfigurationManager into your handler.
 
 
-### Getting properties for a custom Handler ###
+###  Getting properties for a custom Handler 
 
 Once you have the ConfigurationManager, getting properties is very simple:
 
@@ -30,7 +30,7 @@ Once you have the ConfigurationManager, getting properties is very simple:
 This would load any properties prefixed with 'myHandlerName.'
 
 
-### Getting properties for a handler which supports sub-configurations ###
+###  Getting properties for a handler which supports sub-configurations 
 
 Sometimes a handler requires sub-configurations.
 

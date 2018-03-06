@@ -13,7 +13,7 @@ Including these technical concerns as test steps can make the scenarios less exp
 
 Directives in Chorus allows the BA to write the tests, and the developer to annotate them with technical Directives later.
 
-###What are Directives?###
+### What are Directives?
 
 Directives allow you to embed technical actions into features and scenarios, separately from the test steps
 
@@ -51,7 +51,7 @@ You can also append a directive to a step:
 
 If you do this the directive will get executed before the step is run
 
-###How are Directives executed?###
+### How are Directives executed?
 
 Directives are really just a syntactic sugar for standard steps
 
@@ -60,7 +60,7 @@ The purpose of directives is to discriminate between technical actions and busin
 The Chorus parser will generate a step from each directive, and the step is executed in the normal way.
 
 
-###How a Directive is parsed###
+### How a Directive is parsed
 
 This example shows how a scenario containing directives is parsed
 
@@ -82,7 +82,7 @@ becomes the following steps when parsed:
 The #! shebang is the step 'type' (equivalent to the Given, Then, When prefix) for steps which are directives
 
 
-###How to implement a Directive within a `handler` class###
+### How to implement a Directive within a `handler` class
 
 Your handler classes support directives using the Chorus' standard @Step annotation
 

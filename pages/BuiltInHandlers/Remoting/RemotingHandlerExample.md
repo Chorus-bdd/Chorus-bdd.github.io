@@ -53,7 +53,7 @@ Later we can change which components define the steps without changing the scena
 All we need to do is publish the step definitions from the three components:
 
 
-### What do we need to do to make this work? ###
+###  What do we need to do to make this work? 
 
 The first thing is to [write Handler classes](/pages/Handlers/HandlerClasses) for each component, [and export them](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart) 
 
@@ -104,7 +104,7 @@ c) For weapons control, we can use the `@PassesWithin` annotation to allow up to
     new ChorusHandlerJMXExporter(new WeaponsControlHandler()).export();
     ...
 
-### Getting this to run ###
+###  Getting this to run 
 
 First we need start up all the components in our simulation environment (UAT). Then, in order to run the tests, we need to provide a feature file, and a properties file next to the .feature file which will tell the chorus interpreter how to connect to these remote components.
 
@@ -121,7 +121,7 @@ The properties file contains three properties which tell the Chorus interpreter 
 
 
 
-### Some observations about the architecture ###
+###  Some observations about the architecture 
 
 This is a real-time distributed system we are testing and we assume there are message feeds between each of the components.
 

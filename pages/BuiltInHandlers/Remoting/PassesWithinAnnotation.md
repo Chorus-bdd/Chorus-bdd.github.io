@@ -24,7 +24,7 @@ The problems with this are:
 
 Chorus provides a solution in the form of the `@PassesWithin` annotation
 
-###@PassesWithin###
+### @PassesWithin
 
 The `@PassesWithin` annotation can be added to any step method. 
 When the Chorus interpreter executes the step, it will poll the step method repeatedly for a length of time waiting for it to pass.
@@ -53,7 +53,7 @@ With this annotation in place, our test reduces to:
     Given I set the price to 999 in myPricer
     Then the price is 999 in traderUI
 
-###Blocking step methods###
+### Blocking step methods
  
 The step method annotated with @PassesWithin is expected to rapidly fail or succeed, and not block
 
@@ -61,7 +61,7 @@ Chorus will not attempt to terminate blocking step methods, even if they take lo
 Such methods will overrun their allotted time.
 PassesWithin is not a mechanism to kill an overrunning test step.
 
-###Poll Mode###
+### Poll Mode
 
 There are two modes under which `@PassesWithin` can operate, UNTIL_FIRST_PASS and PASS_THROUGHOUT_PERIOD
 
@@ -74,14 +74,14 @@ You can select the Poll Mode in the annotation. By default this is UNTIL_FIRST_P
 
 `@PassesWithin( length=1, timeUnit=TimeUnit.SECONDS pollMode = PollMode.PASS_THROUGHOUT_PERIOD)`
     
-###Polling Frequency###
+### Polling Frequency
 
 You can control the frequency at which the step method is polled during the period. 
 To do this set the pollFrequencyInMilliseconds parameter:
 
 `@PassesWithin( length=1, timeUnit=TimeUnit.SECONDS, pollFrequencyInMilliseconds = 50 )`
 
-###Default Parameter Values###
+### Default Parameter Values
 
 The default wait length is 10 seconds. So using the `@PassesWithin` annotation without any parameters implies waiting for up to ten seconds for a condition to pass, polling every 200ms
 

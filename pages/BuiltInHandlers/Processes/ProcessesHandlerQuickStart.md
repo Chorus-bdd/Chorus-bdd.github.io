@@ -8,7 +8,7 @@ sectionIndex: 20
 Let's imagine you are writing a feature called Publisher Test
 This has a scenario in which you want to start a publisher process, which publishes some messages.
 
-###Create a feature file and import the Processes Handler###
+### Create a feature file and import the Processes Handler
 
 First you might create a feature file called `publisherTest.feature`
 
@@ -23,7 +23,7 @@ The top of your feature file may look like this:
         Scenario: I start a publisher process
       
 
-###Now add a step to start the publisher process###
+### Now add a step to start the publisher process
 
 The Processes handler provides built in steps to start and stop processes
 You can use these during the scenario to start a 'publisher' process
@@ -35,7 +35,7 @@ You can use these during the scenario to start a 'publisher' process
 The process will automatically get stopped at the end of the scenario
 Initially this will fail, since you have not yet provided any config to tell Chorus how to start 'publisher'
 
-###Configure the 'publisher' process###
+### Configure the 'publisher' process
 
 To configure the process, add a publisherTest.properties file in the same directory as your publisherTest.feature.
 
@@ -49,7 +49,7 @@ The new process will use the same JVM and classpath as the chorus interpreter, b
 For a full list of processes properties see [Processes Properties](/pages/BuiltInHandlers/Processes/ProcessesHandlerProperties)
 
 
-###Starting the same process under different names###
+### Starting the same process under different names
 
 In the example above, the configuration is called 'publisher' but the process is named 'pub'
 This distinction allows you to start multiple instances of the publisher process under different logical names:
@@ -58,12 +58,12 @@ This distinction allows you to start multiple instances of the publisher process
     I start a publisher process named pub2
 
 
-###Stopping the pub process###
+### Stopping the pub process
 
 You don't generally need to stop processes explicitly using 'I stop the process' steps.  
 By default any processes started during a scenario will be terminated by Chorus when that scenario is completed.
 
-###Setting a process to feature scope###
+### Setting a process to feature scope
 
 Processes started within a scenario are usually stopped automatically at the end of a scenario. The process is then 'scenario scoped'
 
@@ -76,7 +76,7 @@ Then the process will not be stopped until feature end.
 If you start a process during the special [Feature-Start: scenario](/pages/LanguageExtensions/FeatureStartAndEnd) then it will automatically be scoped to 'feature scope' unless you configure it otherwise.
 
 
-###Waiting for a process to terminate###
+### Waiting for a process to terminate
 
 If you need to wait for a process to terminate there are steps for this..
 
@@ -85,7 +85,7 @@ If you need to wait for a process to terminate there are steps for this..
     I wait for up to 10 seconds for the process pub to terminate
 
 
-###Matching output from processes###
+### Matching output from processes
 
 If you set a process stdOutMode or stdErrMode to 'captured' or 'capturedwithlog' then you can match regular expressions against its output
 
@@ -103,7 +103,7 @@ These steps will block for a period waiting to read the output from the process.
 If the output is not detected, eventually the step will timeout and fail
 The timeout length can be configured as a property.
     
-###Writing to a process std input###
+### Writing to a process std input
 
 You can also write input to a process which processes handler has started:
 
@@ -111,7 +111,7 @@ You can also write input to a process which processes handler has started:
     or
     I write 'my text no line terminator to be appended' to the pub process
 
-###Logging from your processes###
+### Logging from your processes
 
 The processes you are starting may write to their standard output and standard error streams.
 
@@ -134,7 +134,7 @@ n.b. the log file name will be calculated automatically from the feature and pro
     processes.publisher.appendToLogs=false
 
 
-###Log4j support###
+### Log4j support
 
 If the ProcessesHandler finds a file called **log4j.xml** in the same directory as your feature file, then it will set the appropriate log4j system property when starting your processes.
 
@@ -146,7 +146,7 @@ It will also set the following system properties which can be useful in your log
     -Dfeature.process.name=${name of current feature}
 
 
-###Setting defaults for all your processes###
+### Setting defaults for all your processes
 
 If you want all your processes to log to the same directory, you could set a default for this. The easiest way is to add a chorus.properties file at the top level on your test classpath. Use the special 'default' configuration group to specify the default property values:
 
@@ -157,7 +157,7 @@ Now all processes will log into the above directory, unless you override them wi
 
 For full details on chorus properties files see [Handler Configuration](/pages/Handlers/HandlerConfiguration)
 
-###Calling exported steps on the processes you start###
+### Calling exported steps on the processes you start
 
 It's a very common requirement to start a process using the Processes Handler and then call exported test steps on it
 
@@ -168,12 +168,12 @@ this is accomplished simply by setting the remotingPort property
 
 For more details on remoting see [Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)
 
-###Other processes handler steps###
+### Other processes handler steps
 
 The other steps provided by the built in Processes handler [are documented here](/pages/BuiltInHandlers/BuiltInHandlerSteps)
 
 
-###Starting a process which is not a java process###
+### Starting a process which is not a java process
 
 Instead of setting main class, you can set the property `pathToExecutable` to point to a script or native process.
 This may be either an absolute path or a path which is relative to the feature file directory

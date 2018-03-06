@@ -10,7 +10,7 @@ Chorus JUnit integration enables you to run your Chorus features as a suite of J
 This means they can be executed by tools (such as IDE) which provide JUnit support.  
 All you need to do is make sure that junit is on your classpath along with chorus.jar
 
-###JUnit4 ChorusSuite Runner###
+### JUnit4 ChorusSuite Runner
 
 Chorus provides a JUnit 4 compliant runner for Chorus test suites.
 
@@ -40,7 +40,7 @@ You can use all the same [interpreter parameters](/pages/RunningChorus/Interpret
 
 Most IDE should recognize the @RunWith annotation on this class, and allow you to run it as a JUnit suite with full IDE support.
 
-###Using ChorusSuite as part of an Ant build###
+### Using ChorusSuite as part of an Ant build
 
 Chorus JUnit test suites are often executed as part of an ant build.  
 To get the best results from the Ant JUnit task, we recommend running the chorus tests forked  
