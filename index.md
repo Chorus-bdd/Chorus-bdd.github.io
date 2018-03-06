@@ -3,7 +3,7 @@ layout: page
 title: What is Chorus?
 ---
 
-Chorus is a versatile BDD (Behaviour Driven Development) testing interpreter
+Chorus is a versatile BDD (Behaviour Driven Development) test interpreter
 
 Conventional BDD tools require you to provide step definitions locally. 
 This is possible with Chorus too. 
@@ -11,10 +11,10 @@ This is possible with Chorus too.
 However, the Chorus interpreter also allows you to publish step definitions over the network from your components or microservices under test.
 When the interpreter runs it can connect to your components, find the step definitons and execute them.  
 
-Chorus supports both Java (or JVM-based) and Javascript components (enabling a direct connection to test Web apps in the browser)
+Chorus supports both Java (JVM-based) and Javascript components (enabling a direct connection to test Web apps in the browser)
 
-Chorus is ideal for integration testing systems with microservice-based architectures. 
- 
+Chorus is open source!
+Here's where to find the project on [Github](https://github.com/Chorus-bdd/) 
 
 ![Chorus Overview](/public/ChorusOverview.png)
 
