@@ -11,6 +11,7 @@ tagline:          'BDD testing for distributed systems'
 description:      'BDD testing for distributed systems'
 url:              https://github.com/Chorus-bdd/
 baseurl:          /
+root: /
 
 author:
   name:           'Chorus BDD'
