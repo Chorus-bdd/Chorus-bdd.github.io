@@ -19,7 +19,7 @@ e.g.
 
 With this added, the feature will be run once for each configuration name specified.
 
-##How to use configurations##
+## How to use configurations
 
 ### Using Configurations with Properties files
 

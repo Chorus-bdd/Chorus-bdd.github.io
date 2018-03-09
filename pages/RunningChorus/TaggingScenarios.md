@@ -7,7 +7,7 @@ sectionIndex: 40
 
 Chorus allows the features and scenarios tested to be filtered using a simple filtering expression that matches tags in the feature files
 
-##Tagging Scenarios##
+## Tagging Scenarios
 
 e.g. tag two scenarios to indicate they relate to a billing use case in our application:
 
@@ -36,7 +36,7 @@ Tags may also be specified at the feature level, causing them to be inherited by
 Above, the ‘Missing product description’ scenario has two tags: important and billing.  
 The ‘Several products’ scenario has just one: billing.
 
-##Filtering by tag##
+## Filtering by tag
 
 When running the interpreter the -t flag is used to specify a tag filtering expression.  
 This expression will be used to eliminate scenarios from the test that will be run.
@@ -93,7 +93,7 @@ As is evident from the above examples:
 As tags are free text, any number of them can be added but care should be taken to ensure that they have some meaning for the project you are working on.
 
 
-##Performing a Dry Run##
+## Performing a Dry Run
 
 When passed to the interpreter, the -dryrun flag signals that the steps in a scenario should not be executed. All other processing will still be performed and a log message indicating whether step handlers were found and could have been executed will be reported instead.
 

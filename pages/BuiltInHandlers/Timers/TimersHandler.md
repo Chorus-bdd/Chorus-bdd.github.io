@@ -31,7 +31,7 @@ This approach can make your features run more quickly, and be less prone to make
 
 See [Handler Classes](/pages/Handlers/HandlerClasses) for examples of @PassesWithin
 
-##Some other examples##
+## Some other examples
 
         ..
         I wait for 50 milliseconds for the message to be sent

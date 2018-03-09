@@ -5,35 +5,16 @@ section: Getting Started
 sectionIndex: 10
 ---
 
+The Chorus interpreter can be run in several different ways
 
-The Chorus interpreter is a Java project.
-
-To run it, you need just the chorus.jar - see the [Download Page for this](/pages/Resources/Download)
-
-Chorus 2.x requires jdk 1.7+
-Chorus 3.x requires jdk 1.8+
-
-The best way to get started is to [download and run the tests in the demo project](https://github.com/Chorus-bdd/Chorus-demo)
-
-See here for [examples of running the Chorus interpreter](/pages/RunningChorus/RunningChorus)
-
-The [Simple Example](/pages/GettingStarted/SimpleExample) from the demo shows how to get a simple test running
-
-#### Here is a general overview of the process to write Chorus tests:
-
-1. Write tests in plain English (as .feature files [following the standard Gherkin syntax](https://github.com/cucumber/cucumber/wiki/Gherkin).
-2. [Run the Chorus interpreter](/pages/RunningChorus/RunningChorus), giving it a path to your feature files.
-
-At this point your tests will run, but they will fail because you have not yet provided an implementation.
-
-To make the features pass, supply java classes which implement the test steps in your feature files.
-These classes are called ['Handler' classes](/pages/Handlers/HandlerClasses)
-
-Chorus also provides some [Built In Handlers](/pages/BuiltInHandlers/BuiltInHandlers).
-These provide support for local process control and connecting to run steps on components across the network
-
-You will need to provide your own `Handler` classes to implement your own test steps.
-
+* For integration testing in a Docker-enabled environment:  
+  [Use a Docker image downloadable from Docker hub](/pages/GettingStarted/Docker/RunningWithDocker) 
+  
+* For integration testing where Docker is not available  
+  [Download Chorus and install it as a standalone installable package](/pages/GettingStarted/StandaloneInstallable/RunningAsAStandaloneInstallable)
+  
+* To integrate with a Java project as a JUnit test suite (for component testing)  
+  [Add Chorus as a maven/gradle dependency, or download it as a jar dependency](/pages/GettingStarted/JUnitTests/RunningAsJUnitSuite)
 
 
 

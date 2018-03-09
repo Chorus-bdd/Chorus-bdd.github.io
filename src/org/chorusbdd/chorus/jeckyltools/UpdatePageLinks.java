@@ -77,6 +77,8 @@ public class UpdatePageLinks {
             siteMapContents.append("###");
             if ( s.getLevel() > 1) {
                 siteMapContents.append("# &nbsp;&nbsp;&nbsp;");
+            } else {
+                siteMapContents.append(" ");
             }
             siteMapContents.append(s.getSectionName());
             siteMapContents.write("\n\n");

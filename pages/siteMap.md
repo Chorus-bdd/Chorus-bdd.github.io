@@ -6,7 +6,10 @@ title: Site Map
 ### Getting Started
 
  * [Getting Started](/pages/GettingStarted/GettingStarted)
+ * [Running With Docker](/pages/GettingStarted/Docker/RunningWithDocker)
+ * [Running as A Standalone Installable](/pages/GettingStarted/StandaloneInstallable/RunningAsAStandaloneInstallable)
  * [Simple Example](/pages/GettingStarted/SimpleExample)
+ * [Running As A JUnit Suite](/pages/GettingStarted/JUnitTests/RunningAsJUnitSuite)
 
 
 ### Running Chorus
