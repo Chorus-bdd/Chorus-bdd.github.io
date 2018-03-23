@@ -5,7 +5,7 @@ section: Getting Started
 sectionIndex: 20
 ---
 
-If you don't have Docker capability, you can download the Chorus tarball and install it
+You can download the Chorus tarball and install it locally, if you want to run the interpreter from the command line
 You will need Java JDK 8+ installed on your system.
 
 To install Chorus this way:

@@ -63,3 +63,7 @@ You can put a chorus.properties file here containing global properties for Choru
 
 If you have additional .jar which you would like to include on the Chorus classpath, these can be placed in the directory mounted at `/choruslibs`.
 This can be useful to provide jdbc drivers for the built in SQL handler, or your own library of handler classes
+
+If providing your own handler classes remember to tell Chrous which packages to scan to find them, using the -h switch.  
+e.g. `-h org.myorg.myhandlers`
+
