@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Running With Docker
-section: Getting Started
+section: Running Chorus
 sectionIndex: 20
 ---
 

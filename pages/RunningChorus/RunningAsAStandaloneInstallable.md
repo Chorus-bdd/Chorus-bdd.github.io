@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Running as A Standalone Installable
-section: Getting Started
+section: Running Chorus
 sectionIndex: 20
 ---
 

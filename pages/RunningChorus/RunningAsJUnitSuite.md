@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Running As A JUnit Suite
-section: Getting Started
+title: Running Chorus as a JUnit Suite
+section: Running Chorus
 sectionIndex: 20
 ---
 

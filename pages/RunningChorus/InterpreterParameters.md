@@ -20,7 +20,7 @@ Where a parameter value is set as a System property this will generally override
 <tr>
   <td>-featurePaths (-f, chorusFeaturePaths)</td>
   <td>none, must be set</td>
-  <td>-f c:mypath ..mypath ..mypathmyfeature.feature</td>
+  <td>-f /myPath/mypath ../mypath ../mypath/myfeature.feature</td>
   <td>Relative or absolute paths to the directories containing your feature files or paths to specific feature files. Directories will be searched recursively</td>
 </tr>
 <tr>
@@ -112,6 +112,12 @@ Where a parameter value is set as a System property this will generally override
     <td></td>
     <td>-p myProfile</td>
     <td>The profile to use when running Chorus. This can be used to change configuration.
-    Configuration properties may be included if they are prefixed by profile.profileName</td>
+Configuration properties may be included if they are prefixed by profile.profileName</td>
+</tr>
+<tr>
+    <td>-showStepCatalogue (-b, chorusShowStepCatalogue)</td>
+    <td>false</td>
+    <td>-b (false|true)</td>
+    <td>Show the catalogue of all step definitions encountered by the interpreter during the test run along with usage statistics</td>
 </tr>
 </table>
