@@ -5,16 +5,37 @@ section: Getting Started
 sectionIndex: 10
 ---
 
-The Chorus interpreter can be run in several different ways
+To use Chorus, you must download and run the Chorus interpreter.   
+This will parse the feature files containing your BDD tests, and execute them.
 
-* For integration testing in a Docker-enabled environment:  
-  [Use a Docker image downloadable from Docker hub](/pages/GettingStarted/Docker/RunningWithDocker) 
+There are several ways to get and run Chorus, depending on the needs of your project
   
-* For integration testing where Docker is not available  
-  [Download Chorus and install it as a standalone installable package](/pages/GettingStarted/StandaloneInstallable/RunningAsAStandaloneInstallable)
+* **Integrated with a Java project as a JUnit test suite:**   
+  [Add Chorus as a maven/gradle dependency, or download it as a jar dependency](/pages/RunningChorus/RunningAsJUnitSuite)
+
+* **As a Docker container in a Docker-enabled environment:**  
+  [Use a Docker image downloadable from Docker hub](/pages/RunningChorus/RunningWithDocker) 
   
-* To integrate with a Java project as a JUnit test suite (for component testing)  
-  [Add Chorus as a maven/gradle dependency, or download it as a jar dependency](/pages/GettingStarted/JUnitTests/RunningAsJUnitSuite)
+* **From the command line:**  
+  [Download Chorus and install it as a standalone installable package](/pages/RunningChorus/RunningAsAStandaloneInstallable)
 
 
 
+### Here is a general overview of the process to write Chorus tests:
+
+1. Write tests in plain English (as .feature files [following the standard Gherkin syntax](https://github.com/cucumber/cucumber/wiki/Gherkin).
+2. Run the Chorus interpreter, providing it with a path to find your feature files.
+
+At this point your tests will run, but they will fail because you have not yet provided an implementation for your test steps
+There are several ways to provide implementations of test steps with Chorus:
+
+1. Supply java classes on the interpreter's classpath which implement the test steps in your feature files. 
+These classes are called ['Handler' classes](/pages/Handlers/HandlerClasses)
+2. Make use of pre-packaged step definitions from Chorus' [Built In Handlers](/pages/BuiltInHandlers/BuiltInHandlers).
+These provide a library of generic test steps to solve various common problems, 
+such as starting and stopping processes, running SQL scripts on databases or connecting Chorus to remote services in an 
+integration testing environment.
+3. Use Chorus' client libaries to publish step definitions to Chorus from the various microservice or front end components 
+running in your integration test environment. The built in handlers **Remoting** and **Web Sockets** provide steps which allow the
+Chorus interpreter to connect and find these remote step definitions as part of a test feature. This allows your services under test to 
+provide their own step implementations, which are discoverable at runtime by the interpreter.

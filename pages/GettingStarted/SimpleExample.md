@@ -7,9 +7,12 @@ sectionIndex: 20
 
 ## Chorus Demo Project
 
-There is a simple project with some Chorus examples, including the Calculator example below, at:
+There is a simple project with some Chorus examples, including the Calculator example below:
+[Chorus Demo](https://github.com/Chorus-bdd/Chorus-demo)
 
-https://github.com/Chorus-bdd/Chorus-demo
+This demo project runs Chorus tests as a JUnit test suite with a Java project  
+[You can also run Chorus at the command line, or as a Docker container](/pages/GettingStarted/GettingStarted)
+
 
 ## Let's look at a very simple example, which tests a Calculator class.
 
