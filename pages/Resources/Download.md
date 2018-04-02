@@ -5,7 +5,7 @@ section: Resources
 sectionIndex: 20
 ---
 
-## Getting Chorus
+## Downloading Chorus
 
 There are several ways you can run Chorus - as a JUnit test suite integrated with a Java project, as a standalone command line tool, or as a Docker container.
 
