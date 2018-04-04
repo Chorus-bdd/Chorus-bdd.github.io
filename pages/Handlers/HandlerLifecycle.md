@@ -34,7 +34,7 @@ it makes sense to do this work once rather than before every scenarios.
 
 An example might be starting up a process or establishing a connection and logging in to a server.
 
-The Handler scoping mechanism is especially useful in conjunction with Chorus' [Feature-Start and Feature-End scenarios](/pages/LanguageExtensions/FeatureStartAndEnd)
+The Handler scoping mechanism is especially useful in conjunction with Chorus' [Feature-Start and Feature-End scenarios](/pages/GherkinExtensions/FeatureStartAndEnd)
 
 
 ### Lifecycle Methods on Handler classes

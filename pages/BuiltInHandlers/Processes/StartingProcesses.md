@@ -20,7 +20,7 @@ For example, using the Processes handler would allow you to do the following:
         And I start a subscriber process named sub
         ...
 
-If preferred, you can also use [directives](/pages/LanguageExtensions/Directives) to start a process:
+If preferred, you can also use [directives](/pages/GherkinExtensions/Directives) to start a process:
 
     Uses: Processes
 

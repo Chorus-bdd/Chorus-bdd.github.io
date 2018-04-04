@@ -73,7 +73,7 @@ e.g. `processes.publisher.scope=feature`
 
 Then the process will not be stopped until feature end.
 
-If you start a process during the special [Feature-Start: scenario](/pages/LanguageExtensions/FeatureStartAndEnd) then it will automatically be scoped to 'feature scope' unless you configure it otherwise.
+If you start a process during the special [Feature-Start: scenario](/pages/GherkinExtensions/FeatureStartAndEnd) then it will automatically be scoped to 'feature scope' unless you configure it otherwise.
 
 
 ### Waiting for a process to terminate

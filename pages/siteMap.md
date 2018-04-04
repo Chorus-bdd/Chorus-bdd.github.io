@@ -6,16 +6,15 @@ title: Site Map
 ### Getting Started
 
  * [Getting Started](/pages/GettingStarted/GettingStarted)
- * [Running With Docker](/pages/RunningChorus/RunningWithDocker)
- * [Running As A JUnit Suite](/pages/RunningChorus/RunningAsJUnitSuite)
- * [Running as A Standalone Installable](/pages/RunningChorus/RunningAsAStandaloneInstallable)
  * [Simple Example](/pages/GettingStarted/SimpleExample)
 
 
 ### Running Chorus
 
  * [Interpreter Parameters](/pages/RunningChorus/InterpreterParameters)
- * [JUnit Integration](/pages/RunningChorus/JUnitIntegration)
+ * [Running With Docker](/pages/RunningChorus/RunningWithDocker)
+ * [Running Chorus as a JUnit Suite](/pages/RunningChorus/RunningAsJUnitSuite)
+ * [Running as A Standalone Installable](/pages/RunningChorus/RunningAsAStandaloneInstallable)
  * [Tagging Scenarios](/pages/RunningChorus/TaggingScenarios)
 
 
@@ -63,12 +62,12 @@ title: Site Map
 
 ### Language Extensions
 
- * [Language Extensions](/pages/LanguageExtensions/LanguageExtensions)
- * [Directives](/pages/LanguageExtensions/Directives)
- * [Step Macro](/pages/LanguageExtensions/StepMacro)
- * [Feature Start and End](/pages/LanguageExtensions/FeatureStartAndEnd)
- * [Scenario Outline Tags](/pages/LanguageExtensions/ScenarioOutlineTags)
- * [Configurations](/pages/LanguageExtensions/Configurations)
+ * [Language Extensions](/pages/GherkinExtensions/GherkinExtensions)
+ * [Directives](/pages/GherkinExtensions/Directives)
+ * [Step Macro](/pages/GherkinExtensions/StepMacro)
+ * [Feature Start and End](/pages/GherkinExtensions/FeatureStartAndEnd)
+ * [Scenario Outline Tags](/pages/GherkinExtensions/ScenarioOutlineTags)
+ * [Configurations](/pages/GherkinExtensions/Configurations)
 
 
 ### Resources
