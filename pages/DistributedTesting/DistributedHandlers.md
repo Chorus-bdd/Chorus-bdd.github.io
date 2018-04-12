@@ -1,17 +1,17 @@
 ---
 layout: page
-title: Distributed Testing
-section: Remoting
+title: Distributed Handlers
+section: Distributed Testing
 sectionIndex: 10
 ---
 
-Chorus has some unique capabilities for distributed testing:
+Usually when you write BDD tests, you need to provide an implementation for each step locally. 
 
-To test distributed systems, you can export step implementations from remote components, and have the interpreter call
-those components over the network to run test steps.
+If you want to interact with any components which are running remotely, it is up to you to find a mechanism to connect to them over the network
 
-Usually when you run a test with Chorus, the interpreter will look for `@Handler` classes with step definitions in its local classpath.
-When you do distributed testing, these Handler classes can be in remote components instead
+Chorus changes this, by providing client libraries which allow you to implement test steps within the test code 
+
+
 
 Chorus provides a mechanism to export step definitions from a remote component - the class `ChorusHandlerJmxExporter`.
 This class can export steps from one or more Handler classes.

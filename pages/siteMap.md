@@ -28,6 +28,12 @@ title: Site Map
  * [Custom Configuration](/pages/Handlers/CustomConfiguration)
 
 
+### Distributed Testing
+
+ * [Distributed Handlers](/pages/DistributedTesting/DistributedHandlers)
+ * [Passes Within Annotation](/pages/DistributedTesting/PassesWithinAnnotation)
+
+
 ### Built In Handlers
 
  * [Built In Handlers](/pages/BuiltInHandlers/BuiltInHandlers)
@@ -48,11 +54,9 @@ title: Site Map
 
 #### &nbsp;&nbsp;&nbsp;Remoting
 
- * [Distributed Testing](/pages/BuiltInHandlers/Remoting/DistributedTesting)
  * [Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)
  * [Remoting Handler Example](/pages/BuiltInHandlers/Remoting/RemotingHandlerExample)
  * [Remoting Handler Properties](/pages/BuiltInHandlers/Remoting/RemotingHandlerProperties)
- * [Passes Within Annotation](/pages/BuiltInHandlers/Remoting/PassesWithinAnnotation)
 
 
 #### &nbsp;&nbsp;&nbsp;Timers

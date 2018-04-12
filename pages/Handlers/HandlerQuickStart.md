@@ -147,7 +147,7 @@ If you return a value from a step method, this value will be visible in the Chor
 When testing distributed systems, you often need to allow some time for a condition to be satisfied
 In this case, you can use the @PassesWithin annotation, to allow a certain amount of time within which your Assertion should succeed.
 
-See [Passes Within Annotation](/pages/BuiltInHandlers/Remoting/PassesWithinAnnotation)
+See [Passes Within Annotation](/pages/DistributedTesting/PassesWithinAnnotation)
 
 
 ###  Handler Lifecycle 

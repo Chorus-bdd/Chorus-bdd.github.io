@@ -137,7 +137,7 @@ so that we can test the outcome in the weapons control process.
 
 Since we are using message feeds there are latencies involved.
 The messages from the navigation and tactical components may take some time to arrive at weaponsControl.
-That's why we have used the [@PassesWithin](/pages/BuiltInHandlers/Remoting/PassesWithinAnnotation) annotation in the weapons control step.
+That's why we have used the [@PassesWithin](/pages/DistributedTesting/PassesWithinAnnotation) annotation in the weapons control step.
 This polls the method for a limited period, waiting for the assertion (shields are up) to be satisfied, instead of failing
 immediately if there is a small delay.
 

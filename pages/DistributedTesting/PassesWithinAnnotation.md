@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Passes Within Annotation
-section: Remoting
+section: Distributed Testing
 sectionIndex: 50
 ---
 

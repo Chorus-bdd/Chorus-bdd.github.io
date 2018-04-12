@@ -1,6 +1,7 @@
 1,Getting Started
 1,Running Chorus
 1,Handlers
+1,Distributed Testing
 1,Built In Handlers
 2,Chorus Context
 2,Processes
