@@ -145,9 +145,9 @@ If you return a value from a step method, this value will be visible in the Chor
 ###  Handling latency when testing conditions 
 
 When testing distributed systems, you often need to allow some time for a condition to be satisfied
-In this case, you can use the @PassesWithin annotation, to allow a certain amount of time within which your Assertion should succeed.
+In this case, you can use 'Step Retry' to allow a certain amount of time within which your Assertion should succeed.
 
-See [Passes Within Annotation](/pages/DistributedTesting/PassesWithinAnnotation)
+See [Step Retry](/pages/DistributedTesting/StepRetry)
 
 
 ###  Handler Lifecycle 

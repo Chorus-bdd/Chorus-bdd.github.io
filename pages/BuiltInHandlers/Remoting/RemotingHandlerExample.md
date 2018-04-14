@@ -11,46 +11,20 @@ Let's assume we're trying to test the systems on a spacecraft.
 Various distributed components control aspects of the flight.  
 Unlike Battlestar Galactica, all those components are networked! 
 
-Let's see if we can use Chorus to test our spacecraft's battle readiness.
+Let's see if we can use Chorus to test our spacecraft's battle readiness.  
 
-	Uses: Remoting
-
-	Feature: Cylon Base Ship Attack
-
-	    Scenario:  Shields up when Cylon Ship Detected
-		    Given the spacecraft is undocked in navigation
-		    When a Cylon ship is detected in tactical
-		    Then shields go up in weaponsControl
-		    
-		
-This feature uses the built in Remoting handler (`Uses: Remoting`) and the steps run on three distributed components:
-
-* the step ending **in navigation** will run on the **navigation** component 
-* the step ending **in tactical** will run on the **tactical** component
-* the step ending **in weaponsControl** will run on the **weaponsControl** component
-
-Do you think it's a bit ugly to terminate each step with `in componentName`?
-That seems to embed knowledge of our technical architecture within the scenario
-
-Instead, you can use the `Remoting connect` [directive](/pages/GherkinExtensions/Directives) to connect components before the scenario starts:
+We will need to use Chorus' built in `Remoting` handler and tell it to connect to the navigation, tactical and weaponsControl services, so that the steps each component publishes can be discovered by Chorus.
 
 	Uses: Remoting
 
 	Feature: Cylon Base Ship Attack
 
 	    #! Remoting connect navigation, tactical, weaponsControl
-
 	    Scenario:  Shields up when Cylon Ship Detected
 		    Given the spacecraft is undocked
 		    When a Cylon ship is detected
 		    Then shields go up
 
-Isn't that cleaner?
-
-Now the steps don't specify the component they run on - we can leave Chorus to figure that out.
-Later we can change which components define the steps without changing the scenario text.
-
-All we need to do is publish the step definitions from the three components:
 
 
 ###  What do we need to do to make this work? 
@@ -88,14 +62,13 @@ b) Do the same for Tactical component:
     new ChorusHandlerJMXExporter(new TacticalHandler()).export();
     ...
 
-c) For weapons control, we can use the `@PassesWithin` annotation to allow up to 1 second for the shields to go up after the messages are sent. 
+c) For weapons control, we can use the [Step Retry](/pages/DistributedTesting/StepRetry) to allow up to 10 seconds for the shields to go up after the messages are sent (but it shouldn't take that long!)
 
 	@Hander("WeaponsControl")
 	public class WeaponsControlHandler {
 	
-		@Step("shields go up")
-		@PassesWithin( length=1, timeUnit=TimeUnit.SECONDS )
-		public void checkSheildsAreUp(){
+		@Step("shields go up", retryDuration=10)
+		public void checkShieldsAreUp(){
             ChorusAssert.assertTrue(getShieldStatus() == UP);
 		}
 	}
@@ -120,7 +93,6 @@ The properties file contains three properties which tell the Chorus interpreter 
 
 
 
-
 ###  Some observations about the architecture 
 
 This is a real-time distributed system we are testing and we assume there are message feeds between each of the components.
@@ -137,7 +109,7 @@ so that we can test the outcome in the weapons control process.
 
 Since we are using message feeds there are latencies involved.
 The messages from the navigation and tactical components may take some time to arrive at weaponsControl.
-That's why we have used the [@PassesWithin](/pages/DistributedTesting/PassesWithinAnnotation) annotation in the weapons control step.
+That's why we have used a [Step Retry](/pages/DistributedTesting/StepRetry) (retryDuration) in the weapons control step.
 This polls the method for a limited period, waiting for the assertion (shields are up) to be satisfied, instead of failing
 immediately if there is a small delay.
 

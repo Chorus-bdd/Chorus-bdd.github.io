@@ -5,14 +5,11 @@ section: Distributed Testing
 sectionIndex: 10
 ---
 
-Usually when you write BDD tests, you need to provide an implementation for each step locally. 
+Usually when you write BDD tests, you need to provide an implementation for each step locally. If you want to interact with any components which are running remotely, it is up to you to find a mechanism to connect to them.
 
-If you want to interact with any components which are running remotely, it is up to you to find a mechanism to connect to them.
+Chorus reverses this, by providing client libraries which allow you to publish test steps from the components you wish to test. 
 
-Chorus changes this, by providing client libraries which allow you to publish test steps from the components you wish to test. 
-The interpreter can connect to the components to find these step definitions when the tests are executed.
-
-At present, Chorus enables step publication from both Java/JVM and Javascript (browser) components
+Chorus enables step publication from Java (JVM) and Javascript components
 
 
 ### Java / JVM

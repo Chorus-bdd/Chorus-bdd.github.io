@@ -23,13 +23,15 @@ e.g.
          
 In the above example, the step `I wait for 2 seconds .*` would be matched by Timers handler
 
-### Consider the @PassesWithin annotation
+### Consider Step Retry 
 
-In most cases, where you are considering using a sleep, you would be better off using Chrous' @PassesWithin annotation.
-Using @PassesWithin you can annotate a step method to run repeatedly for a period of time, waiting for assertions to be satisfied.
+In most cases, where you are considering using a sleep, you would be better off using Chrous' Step Retry capability.
+Using Step Retry you can annotate a step method to run repeatedly for a period of time, waiting for assertions to be satisfied.
+
+See [Step Retry](/pages/DistributedTesting/StepRetry)
+
 This approach can make your features run more quickly, and be less prone to make your tests fail due to timing-related issues.
 
-See [Handler Classes](/pages/Handlers/HandlerClasses) for examples of @PassesWithin
 
 ## Some other examples
 
