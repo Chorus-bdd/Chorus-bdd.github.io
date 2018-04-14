@@ -7,32 +7,37 @@ sectionIndex: 10
 
 Usually when you write BDD tests, you need to provide an implementation for each step locally. 
 
-If you want to interact with any components which are running remotely, it is up to you to find a mechanism to connect to them over the network
+If you want to interact with any components which are running remotely, it is up to you to find a mechanism to connect to them.
 
-Chorus changes this, by providing client libraries which allow you to implement test steps within the test code 
+Chorus changes this, by providing client libraries which allow you to publish test steps from the components you wish to test. 
+The interpreter can connect to the components to find these step definitions when the tests are executed.
+
+At present, Chorus enables step publication from both Java/JVM and Javascript (browser) components
 
 
+### Java / JVM
 
-Chorus provides a mechanism to export step definitions from a remote component - the class `ChorusHandlerJmxExporter`.
-This class can export steps from one or more Handler classes.
+To publish steps to the Chorus interpreter from a Java/JVM component, you can use the Chorus utility class `ChorusHandlerJmxExporter` within the component.
+This utility uses Java's JMX platform MBean server to make steps discoverable  
 
-You then use the `Remoting` Handler in your Chorus features to allow the interpreter to connect, so that it can discover and run the remote steps.
+Typically steps publication is only enabled in UAT/Integration testing environments, and not in a Production environment
 
-See also:
+The `Remoting` handler provides built in steps to use in your feature files which allow Chorus to connect to a remote component and discover the step definitions.
+
+See:
 
 [Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)  
 [Remoting Handler Example](/pages/BuiltInHandlers/Remoting/RemotingHandlerExample)
 
-### What network protocol is used?
 
-The ChorusHandlerJmxExporter uses the standard Java platform JMX container.
 
-A Chorus exporter bean is registered in the container, and this can be located by the Chorus interpreter using the RMI/IIOP protocol.
-The exporter bean handles remote procedure calls which allow the Chorus interpreter to discover and execute the remote steps.
+### Javascript / Browser
 
-**ChorusContext**
+You can use the `chorus-js` library to publish steps to Chorus from a Javascript component.
+This library can publish step definitions to the Chorus interpreter over a web socket connection.
 
-Another feature which makes Chorus remoting powerful is the `ChorusContext`. 
+The `Web Sockets` handler provides built in steps which allow the Chorus interpreter to initiate the web socket and wait for step publication to complete.
+The `Selenium` handler provides steps to open a browser and interact with it.
 
-[Chorus Context](/pages/BuiltInHandlers/ChorusContext/ChorusContext) is a Map containing variables which is propagated to your handler classes (both local and remote) when steps are executed. This means that your `@Step` methods can set variables in the context which are then available in subsequent steps, no matter whether those steps are executed locally or remotely.
+When testing browser-based apps, the Javascript which publishes the step defintions can either be built into the app directly, or can be injected via Selenium
 
