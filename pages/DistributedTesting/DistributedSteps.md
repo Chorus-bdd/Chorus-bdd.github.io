@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Distributed Handlers
+title: Distributed Steps
 section: Distributed Testing
 sectionIndex: 10
 ---
@@ -21,6 +21,8 @@ Typically steps publication is only enabled in UAT/Integration testing environme
 
 The `Remoting` handler provides built in steps to use in your feature files which allow Chorus to connect to a remote component and discover the step definitions.
 
+This capability works well with Java/JVM services which are running in a test environment as daemon processes, but it is also possible for Chorus to start a process and connect to it during a feature
+
 See:
 
 [Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)  
@@ -30,11 +32,14 @@ See:
 
 ### Javascript / Browser
 
-You can use the `chorus-js` library to publish steps to Chorus from a Javascript component.
+You can use the `chorus-js` library to publish steps to Chorus from a Javascript component (e.g. a single page app in a Browser)
 This library can publish step definitions to the Chorus interpreter over a web socket connection.
 
 The `Web Sockets` handler provides built in steps which allow the Chorus interpreter to initiate the web socket and wait for step publication to complete.
-The `Selenium` handler provides steps to open a browser and interact with it.
+The `Selenium` handler provides steps which allow Chorus to open a browser and interact with it, and inject scripts.
 
 When testing browser-based apps, the Javascript which publishes the step defintions can either be built into the app directly, or can be injected via Selenium
 
+See:
+
+[chorus-js](/pages/DistributedTesting/ChorusJS)

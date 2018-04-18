@@ -33,7 +33,7 @@ There are several ways to provide implementations of test steps to Chorus:
 1. **Supply java classes** on the interpreter's classpath which implement the test steps in your feature files. 
 These classes are called ['Handler' classes](/pages/Handlers/HandlerClasses)  
 
-2. **Make use of pre-packaged step definitions** from Chorus' [Built In Handlers](/pages/BuiltInHandlers/BuiltInHandlers).
+2. **Make use of pre-packaged step definitions** from Chorus' [Built In Steps](/pages/BuiltInHandlers/BuiltInSteps).
 These provide a library of generic test steps to solve various common problems, 
 such as starting and stopping processes, running SQL scripts on databases or connecting Chorus to remote services in an 
 integration testing environment.  

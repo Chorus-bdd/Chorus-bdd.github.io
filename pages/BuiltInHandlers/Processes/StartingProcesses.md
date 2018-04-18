@@ -5,7 +5,7 @@ section: Processes
 sectionIndex: 10
 ---
 
-Chorus has a [built in handler](/pages/BuiltInHandlers/BuiltInHandlers) class which allows you to start and stop local processes during a test.
+Chorus has a [built in handler](/pages/BuiltInHandlers/BuiltInSteps) class which allows you to start and stop local processes during a test.
 
 You can also search for patterns in a process' standard output, and send standard input to a running process
 

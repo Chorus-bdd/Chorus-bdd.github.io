@@ -30,13 +30,13 @@ title: Site Map
 
 ### Distributed Testing
 
- * [Distributed Handlers](/pages/DistributedTesting/DistributedHandlers)
+ * [Distributed Steps](/pages/DistributedTesting/DistributedSteps)
  * [Step Retry](/pages/DistributedTesting/StepRetry)
 
 
 ### Built In Handlers
 
- * [Built In Handlers](/pages/BuiltInHandlers/BuiltInHandlers)
+ * [Built In Steps](/pages/BuiltInHandlers/BuiltInSteps)
 
 
 #### &nbsp;&nbsp;&nbsp;Chorus Context
