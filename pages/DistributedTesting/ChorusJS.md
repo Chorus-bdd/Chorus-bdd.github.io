@@ -5,7 +5,7 @@ section: Distributed Testing
 sectionIndex: 20
 ---
 
-`chorus-js` is a javascript client library for Chorus which allows a Javscript component (e.g. a single page app in a browser) to publish step definitions to the interpreter.
+[chorus-js](https://github.com/Chorus-bdd/chorus-js) is a Javascript client library for Chorus which allows a Javascript component (e.g. a single page app in a browser) to publish step definitions to the interpreter.
 
 To achieve this, at the start of a test feature:
 
@@ -13,7 +13,8 @@ To achieve this, at the start of a test feature:
 2. The interpreter opens the browser (using Selenium) and the browser loads the app.
 3. The app opens a web socket connection and publishes test steps using `chorus-js`
 4. The interpreter waits for test step publication to complete
-5. .. the feature continues, maching steps against both local and published step definitions
+
+Afte this, the feature continues, maching steps against both local and published step definitions
 
 The above handshaking is often carried out in a [Feature Start](/Pages/GherkinExtensions/FeatureStartAndEnd) section, which contains the steps to make the connection, leaving the business functionality to the scenarios
 
@@ -41,12 +42,12 @@ This approach has several advantages:
 
 * The Javascript code implementing the test steps runs within the browser, and can access the DOM (and other APIs such as querySelector) directly.
 * Execution is much faster than a pure-Selenium approach, because of the direct web socket connection
-* Handling latency-related errors is much easier, due to Chorus' [Step Retry](/Pages/DistributedTesting/StepRetry) capabilities
+* Handling latency-related step failures is much easier, due to Chorus' [Step Retry](/Pages/DistributedTesting/StepRetry) capabilities
 
 
 ### Integrating test steps with the app
 
-There are several approaches to integrating test steps with the app, there are advantages and tradeoffs of each approach
+There are a couple of approaches to integrating test steps with the app, there are advantages and tradeoffs of each approach
 
 ##### 1. Build in test steps alongside the app code
 
