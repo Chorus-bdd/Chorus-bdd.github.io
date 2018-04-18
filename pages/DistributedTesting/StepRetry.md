@@ -15,7 +15,7 @@ Have you seen features which look like this?
 
 Here the latency in the price change message between the myPricer and the traderUI components has forced us to add a sleep between
 the two steps. Of course we hope the latency will be a lot less than 10 seconds, however, to avoid occasional failures during
-our test suites we are always forced to use an upper bound as the wait period.
+our test suites we are always forced to use a 'worst case' upper bound as the wait period.
                            
 The problems with this are:
 
@@ -32,8 +32,9 @@ If you configure a step with a 'Step Retry' then for a period of time the interp
 
 Only the final error raised during the retry period will be captured in the interpreter output.
 
-This provides a very easy mechanism to deal with failures caused by latency.
+This provides a very easy mechanism to deal with failures caused by latency or asynchronous loading.
 The step implementation need only fail the step (by throwing an Exception or AssertionError) - and rely on the interpreter to try again later.
+There is no longer any need to write step logic which waits for conditions to pass.
 
 When using this feature you should make sure that your step implemention has no side-effects, but only checks a condition.
 Also, it should not block, but should return or throw an error quickly
