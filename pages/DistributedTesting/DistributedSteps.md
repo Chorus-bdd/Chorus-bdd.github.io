@@ -5,9 +5,9 @@ section: Distributed Testing
 sectionIndex: 10
 ---
 
-Usually when you write BDD tests, you need to provide an implementation for each step locally. If you want to interact with any components which are running remotely, it is up to you to find a mechanism to connect to them.
+Usually when you write BDD tests, you need to provide an implementation for each step locally. 
 
-Chorus reverses this, by providing client libraries which allow you to publish test steps from the components you wish to test. 
+Unlike other frameworks, Chorus provides client libraries which allow you to publish test steps from the components you wish to test. These components can be local or deployed to remote servers.
 
 Chorus enables step publication from Java (JVM) and Javascript components
 
@@ -15,13 +15,14 @@ Chorus enables step publication from Java (JVM) and Javascript components
 ### Java / JVM
 
 To publish steps to the Chorus interpreter from a Java/JVM component, you can use the Chorus utility class `ChorusHandlerJmxExporter` within the component.
-This utility uses Java's JMX platform MBean server to make steps discoverable  
 
-Typically steps publication is only enabled in UAT/Integration testing environments, and not in a Production environment
+This utility publishes an MBean on Java's JMX platform MBean server, which the Chorus interpreter can connect to, in order to discover the test steps. 
+The `Remoting` handler provides the built in test steps which allow Chorus to connect to a remote component using JMX.
 
-The `Remoting` handler provides built in steps to use in your feature files which allow Chorus to connect to a remote component and discover the step definitions.
+Typically step publication with JMX is only enabled for a component running in a UAT/Integration testing environments, and is disabled in a Production environment
 
-This capability works well with Java/JVM services which are running in a test environment as daemon processes, but it is also possible for Chorus to start a process and connect to it during a feature
+This capability works well with Java/JVM services which are running in a test environment as daemon processes, but it is also possible for Chorus to start a process and connect to it as part of a feature
+
 
 See:
 

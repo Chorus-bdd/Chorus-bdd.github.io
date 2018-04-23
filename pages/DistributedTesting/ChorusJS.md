@@ -5,16 +5,20 @@ section: Distributed Testing
 sectionIndex: 20
 ---
 
-[chorus-js](https://github.com/Chorus-bdd/chorus-js) is a Javascript client library for Chorus which allows a Javascript component (e.g. a single page app in a browser) to publish step definitions to the interpreter.
+[chorus-js](https://github.com/Chorus-bdd/chorus-js) is a Javascript client library for Chorus which allows a Javascript 
+component (e.g. a single page app in a browser) to publish step definitions to the interpreter.
+ 
+Publication takes place over a web socket connection, using a []simple remoting protocol](https://github.com/Chorus-bdd/Chorus-client-protocol) defined by the Chorus project, which defines 
+how step definitions can be published, and how the interpreter can trigger their execution.
 
-To achieve this, at the start of a test feature:
+To achieve this, at the start of a typical test feature:
 
-1. The interpreter starts a web socket server, to listen for step publication
+1. The interpreter starts a web socket server
 2. The interpreter opens the browser (using Selenium) and the browser loads the app.
-3. The app opens a web socket connection and publishes test steps using `chorus-js`
-4. The interpreter waits for test step publication to complete
+Test step implementations are either built into the app or injected using Selenium
+4. The app opens a web socket connection to the interpreter and publishes test steps using `chorus-js`
 
-Afte this, the feature continues, maching steps against both local and published step definitions
+After this, the feature continues, maching steps against both locally defined and published step definitions
 
 The above handshaking is often carried out in a [Feature Start](/Pages/GherkinExtensions/FeatureStartAndEnd) section, which contains the steps to make the connection, leaving the business functionality to the scenarios
 
@@ -31,7 +35,6 @@ The above handshaking is often carried out in a [Feature Start](/Pages/GherkinEx
        
     Scenario: Scenario One
         ...scenario steps here
-
 
 
 
@@ -54,9 +57,11 @@ There are a couple of approaches to integrating test steps with the app, there a
 This is the simplest way to get started. You need to add chorus-js as a dependency and use it in your app to publish test steps.
 Typically test step publication is triggered by setting an http parameter when the app is loaded.
 
+For an example of this approach see [chorus-js-react-calculator](https://github.com/Chorus-bdd/chorus-js-react-calculator)
+
 ##### 2. Load test step scripts from a separate back end app
 
-In this approach you maintain a separate app which builds and serves test scripts separately from the production app.
-Chorus' Selenium handler can be used to run a script after loading the app in the browser, which triggers the load of 
-the test scripts after the main app has been loaded. This keeps the test code entirely separate from the production app code, 
-at the cost of some extra complexity
+This approach maintains a separate app which builds and serves test scripts separately from the production app.
+Chorus' Selenium handler can be used to run a script after loading the app in the browser, and this script triggers the load of 
+the test scripts into the page, after the main app has been loaded. This keeps the test code entirely separate from the production app code, 
+at the cost of some extra complexity in the set up phase
