@@ -29,7 +29,8 @@ interface component.
 
 ##### 1. Create and export a Handler class to define steps which run within the UI component 
 
-First create a handler class with a 'click the buy button' step
+First create a handler class with a 'click the buy button' step.
+This handler will be added to the source code for the UI component.
 
 The BuyButtonHandler class may look like this:
 
@@ -94,24 +95,27 @@ Note that the scenario above is prefixed with the following directive:
     #! Remoting connect traderUI
 
 This tells Chorus' Remoting handler to connect to the traderUI so that we can match and run the steps which it exports.
-If you prefer you could also use a standard step `Given I connect to the traderUI process` to accomplish this
+Alternatively if you prefer you could also use a built in step `Given I connect to the traderUI process` to accomplish this
 
 Initially this scenario will fail, since we haven't yet told the Remoting handler where the traderUI process is running.
 
 
 ##### 5. Telling chorus where to connect to the remote process**
 
+At present Chorus does not know how to connect to the traderUI process, so the connect directive will fail.
+
 We need to add a property which will tell Chorus' Remoting Handler where the `traderUI` component is running and how to connect to it.
 
 Do this by adding a properties file in the same directory as the feature.
  
 e.g. For a feature file named `clickbuy.feature`, we would add a `clickbuy.properties`
-
 This needs to contain a connection property for each networked component.
 
 If the traderUI was running on server myserver.mydomain on port 18806 then we'd need to add the following property:
 
 	remoting.traderUI.connection=jmx:myserver.mydomain:18806
+
+Note the `remoting` prefix to the property name - this tells Chorus that this is Remoting handler property.
 
 
 ##### 6. More about Remoting properties
