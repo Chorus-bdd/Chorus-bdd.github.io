@@ -20,7 +20,7 @@ Test step implementations are either built into the app or injected using Seleni
 
 After this, the feature continues, maching steps against both locally defined and published step definitions
 
-The above handshaking is often carried out in a [Feature Start](/Pages/GherkinExtensions/FeatureStartAndEnd) section, which contains the steps to make the connection, leaving the business functionality to the scenarios
+The above handshaking is often carried out in a [Feature Start](/pages/GherkinExtensions/FeatureStartAndEnd) section, which contains the steps to make the connection, leaving the business functionality to the scenarios
 
 #### The feature file may start like this:
 
@@ -45,7 +45,7 @@ This approach has several advantages:
 
 * The Javascript code implementing the test steps runs within the browser, and can access the DOM (and other APIs such as querySelector) directly.
 * Execution is much faster than a pure-Selenium approach, because of the direct web socket connection
-* Handling latency-related step failures is much easier, due to Chorus' [Step Retry](/Pages/DistributedTesting/StepRetry) capabilities
+* Handling latency-related step failures is much easier, due to Chorus' [Step Retry](/pages/DistributedTesting/StepRetry) capabilities
 
 
 ### Integrating test steps with the app

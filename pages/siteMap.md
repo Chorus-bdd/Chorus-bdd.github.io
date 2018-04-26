@@ -31,6 +31,7 @@ title: Site Map
 ### Distributed Testing
 
  * [Distributed Steps](/pages/DistributedTesting/DistributedSteps)
+ * [Chorus JS](/pages/DistributedTesting/ChorusJS)
  * [Step Retry](/pages/DistributedTesting/StepRetry)
 
 
