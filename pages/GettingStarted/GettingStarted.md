@@ -19,6 +19,7 @@ There are several ways to get and run the Chorus interpreter, depending on the n
 * **From the command line:**  
   [Download Chorus and install it as a standalone installable package](/pages/RunningChorus/RunningAsAStandaloneInstallable)
 
+No matter how you run Chorus, the [same parameters](/pages/RunningChorus/InterpreterParameters) are supplied to the interpreter to invoke the tests  
 
 
 ### How to write Chorus tests:
@@ -33,12 +34,8 @@ There are several ways to provide implementations of test steps to Chorus:
 1. **Supply java classes** on the interpreter's classpath which implement the test steps in your feature files. 
 These classes are called ['Handler' classes](/pages/Handlers/HandlerClasses)  
 
-2. **Make use of pre-packaged step definitions** from Chorus' [Built In Steps](/pages/BuiltInHandlers/BuiltInSteps).
-These provide a library of generic test steps to solve various common problems, 
-such as starting and stopping processes, running SQL scripts on databases or connecting Chorus to remote services in an 
-integration testing environment.  
+2. **Make use of built in step definitions** from Chorus' [Built In Steps](/pages/BuiltInHandlers/BuiltInSteps).
+These provide a library of generic test steps to solve various common problems
 
-3. **Use Chorus' client libaries to publish step definitions** to Chorus from the various microservice or front end components 
-running in your integration test environment. The built in handlers **Remoting** and **Web Sockets** provide steps which allow the
-Chorus interpreter to connect and find these remote step definitions as part of a test feature. This allows your services under test to 
-provide their own step implementations, which are discoverable at runtime by the interpreter.
+3. **Use Chorus' client libraries to [publish step definitions](/pages/DistributedTesting/DistributedSteps)** from components running in a test environment. 
+Chorus can also start these components locally using its [Process Control](/pages/BuiltInHandlers/Processes/ProcessesHandlerQuickStart)

@@ -7,7 +7,8 @@ sectionIndex: 10
 
 Usually when you write BDD tests, you need to provide an implementation for each step locally. 
 
-Unlike other frameworks, Chorus provides client libraries which allow you to publish test steps from the components you wish to test. These components can be local or deployed to remote servers.
+Unlike other frameworks, Chorus provides client libraries which allow you to publish test steps from the components you wish to test. 
+These components can be running locally or deployed on remote servers.
 
 Chorus enables step publication from Java (JVM) and Javascript components
 
@@ -19,12 +20,10 @@ To publish steps to the Chorus interpreter from a Java/JVM component, you can us
 This utility publishes an MBean on Java's JMX platform MBean server, which the Chorus interpreter can connect to, in order to discover the test steps. 
 The `Remoting` handler provides the built in test steps which allow Chorus to connect to a remote component using JMX.
 
-Typically step publication with JMX is only enabled for a component running in a UAT/Integration testing environments, and is disabled in a Production environment
+This capability works well with Java/JVM services which are running in a test environment as daemon processes, but it is 
+also possible for Chorus to [start a process](/pages/BuiltInHandlers/Processes/ProcessesHandlerQuickStart) and connect to it as part of a feature
 
-This capability works well with Java/JVM services which are running in a test environment as daemon processes, but it is also possible for Chorus to start a process and connect to it as part of a feature
-
-
-See:
+See also:
 
 [Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)  
 [Remoting Handler Example](/pages/BuiltInHandlers/Remoting/RemotingHandlerExample)
@@ -41,6 +40,6 @@ The `Selenium` handler provides steps which allow Chorus to open a browser and i
 
 When testing browser-based apps, the Javascript which publishes the step defintions can either be built into the app directly, or can be injected via Selenium
 
-See:
+See also:
 
 [chorus-js](/pages/DistributedTesting/ChorusJS)

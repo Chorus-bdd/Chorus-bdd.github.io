@@ -60,7 +60,7 @@ This distinction allows you to start multiple instances of the publisher process
 
 ### Stopping the pub process
 
-You don't generally need to stop processes explicitly using 'I stop the process' steps.  
+You generally don't need to stop processes explicitly using 'I stop the process' steps.  
 By default any processes started during a scenario will be terminated by Chorus when that scenario is completed.
 
 ### Setting a process to feature scope
