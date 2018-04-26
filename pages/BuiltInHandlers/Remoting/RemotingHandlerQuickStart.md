@@ -13,8 +13,7 @@ See [Distributed Steps](/pages/DistributedTesting/DistributedSteps) for an overv
 The processes Chorus connects to can be services deployed within a testing environment or may be running locally. 
 The interpreter can [start up local processes](/pages/BuiltInHandlers/Processes/ProcessesHandlerQuickStart) and then connect to them.
 
-Starting processes and connecting to them often occurs at the start of a feature, within Chorus' custom 'Feature-Start:' section.
-This enables connected processes to supply the steps used in the subsequent scenarios.
+Starting processes and connecting to them often occurs at the start of a feature, within Chorus' custom [Feature-Start:](/pages/GherkinExtensions/FeatureStartAndEnd) section.
 
 
 #### Example
