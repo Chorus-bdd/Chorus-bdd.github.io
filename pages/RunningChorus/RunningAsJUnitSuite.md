@@ -19,7 +19,7 @@ If you are using Maven for your project, the dependency would be declared as fol
     <dependency>
       <groupId>org.chorusbdd</groupId>
       <artifactId>chorus</artifactId>
-      <version>2.0.2</version>
+      <version>3.0.0</version>
     </dependency>
     
     
@@ -28,7 +28,7 @@ Other Chorus optional extensions, such as chorus-spring, can be added if require
     <dependency>
       <groupId>org.chorusbdd</groupId>
       <artifactId>chorus-spring</artifactId>
-      <version>2.0.2</version>
+      <version>3.0.0</version>
     </dependency>
 
 
