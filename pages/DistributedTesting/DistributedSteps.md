@@ -5,19 +5,21 @@ section: Distributed Testing
 sectionIndex: 10
 ---
 
-Usually when you write BDD tests, you need to provide an implementation for each step locally. 
+Usually when you write BDD tests, you need to provide an implementation for each test step locally.
 
-Unlike other frameworks, Chorus provides client libraries which allow you to publish test steps from the components you wish to test. 
+Unlike other frameworks, Chorus provides client libraries which allow you to 'publish' test steps from the components you wish to test.
 These components can be running locally or deployed on remote servers.
 
-Chorus enables step publication from Java (JVM) and Javascript components
+Chorus provides libraries which allow step publication from Java (JVM) and Javascript components
 
 
-### Java / JVM
+### Publishing steps from Java / JVM components
+
+The Chorus java library can publish steps to Chorus from a JVM-based component.
+The 'ChorusHandlerJmxExporter' utility publishes an MBean on the JMX platform MBean server, which the Chorus interpreter can connect to, in order to discover the test steps.
 
 To publish steps to the Chorus interpreter from a Java/JVM component, you can use the Chorus utility class `ChorusHandlerJmxExporter` within the component.
 
-This utility publishes an MBean on Java's JMX platform MBean server, which the Chorus interpreter can connect to, in order to discover the test steps. 
 The `Remoting` handler provides the built in test steps which allow Chorus to connect to a remote component using JMX.
 
 This capability works well with Java/JVM services which are running in a test environment as daemon processes, but it is 
@@ -30,7 +32,7 @@ See also:
 
 
 
-### Javascript / Browser
+### Publishing steps from Javascript / Browser
 
 You can use the `chorus-js` library to publish steps to Chorus from a Javascript component (e.g. a single page app in a Browser)
 This library can publish step definitions to the Chorus interpreter over a web socket connection.

@@ -8,7 +8,7 @@ sectionIndex: 10
 To use Chorus, you must download and run the Chorus interpreter.   
 This will parse the feature files containing your BDD tests, and execute them.
 
-There are several ways to get and run the Chorus interpreter, depending on the needs of your project
+There are several ways to run the Chorus interpreter, depending on the needs of your project
   
 * **Integrated with a Java project as a JUnit test suite:**   
   [Add Chorus as a maven/gradle dependency, or download it as a jar dependency](/pages/RunningChorus/RunningAsJUnitSuite)
