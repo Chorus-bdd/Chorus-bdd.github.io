@@ -11,10 +11,10 @@ title: Site Map
 
 ### Running Chorus
 
- * [Interpreter Parameters](/pages/RunningChorus/InterpreterParameters)
  * [Running With Docker](/pages/RunningChorus/RunningWithDocker)
  * [Running Chorus as a JUnit Suite](/pages/RunningChorus/RunningAsJUnitSuite)
  * [Running as A Standalone Installable](/pages/RunningChorus/RunningAsAStandaloneInstallable)
+ * [Interpreter Switches](/pages/RunningChorus/InterpreterSwitches)
  * [Tagging Scenarios](/pages/RunningChorus/TaggingScenarios)
 
 
@@ -30,39 +30,51 @@ title: Site Map
 
 ### Distributed Testing
 
- * [Distributed Steps](/pages/DistributedTesting/DistributedSteps)
+ * [Distributed Tests](/pages/DistributedTesting/DistributedTests)
  * [Chorus JS](/pages/DistributedTesting/ChorusJS)
  * [Step Retry](/pages/DistributedTesting/StepRetry)
 
 
 ### Built In Handlers
 
- * [Built In Steps](/pages/BuiltInHandlers/BuiltInSteps)
+ * [Built In Handlers](/pages/BuiltInHandlers/BuiltInHandlers)
 
 
 #### &nbsp;&nbsp;&nbsp;Chorus Context
 
- * [Context Variables](/pages/BuiltInHandlers/ChorusContext/ChorusContext)
- * [Chorus Context Handler](/pages/BuiltInHandlers/ChorusContext/ChorusContextHandler)
+ * [Chorus Context](/pages/BuiltInHandlers/ChorusContext/ChorusContext)
+ * [Chorus Context Handler Details](/pages/BuiltInHandlers/ChorusContext/ChorusContextHandlerDetails)
 
 
 #### &nbsp;&nbsp;&nbsp;Processes
 
- * [Starting Processes](/pages/BuiltInHandlers/Processes/StartingProcesses)
- * [Processes Handler Quick Start](/pages/BuiltInHandlers/Processes/ProcessesHandlerQuickStart)
- * [Processes Handler Properties](/pages/BuiltInHandlers/Processes/ProcessesHandlerProperties)
+ * [Processes Handler Details](/pages/BuiltInHandlers/Processes/ProcessesHandlerDetails)
 
 
 #### &nbsp;&nbsp;&nbsp;Remoting
 
- * [Remoting Handler Quick Start](/pages/BuiltInHandlers/Remoting/RemotingHandlerQuickStart)
  * [Remoting Handler Example](/pages/BuiltInHandlers/Remoting/RemotingHandlerExample)
- * [Remoting Handler Properties](/pages/BuiltInHandlers/Remoting/RemotingHandlerProperties)
+ * [Remoting Handler Details](/pages/BuiltInHandlers/Remoting/RemotingHandlerDetails)
+
+
+#### &nbsp;&nbsp;&nbsp;Selenium
+
+ * [Selenium Handler Details](/pages/BuiltInHandlers/Selenium/SeleniumHandlerDetails)
+
+
+#### &nbsp;&nbsp;&nbsp;SQL
+
+ * [SQL Handler Details](/pages/BuiltInHandlers/SQL/SQLHandlerDetails)
 
 
 #### &nbsp;&nbsp;&nbsp;Timers
 
- * [Timers Handler](/pages/BuiltInHandlers/Timers/TimersHandler)
+ * [Timers Handler Details](/pages/BuiltInHandlers/Timers/TimersHandlerDetails)
+
+
+#### &nbsp;&nbsp;&nbsp;Web Sockets
+
+ * [Web Sockets Handler Details](/pages/BuiltInHandlers/WebSockets/WebSocketsHandlerDetails)
 
 
 ### Language Extensions
