@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Interpreter Switches
-section: RunningChorus
-sectionIndex: 30
+section: Running Chorus
+sectionIndex: 40
 ---
 
 When running the chorus interpreter, the following parameters are supported. 
