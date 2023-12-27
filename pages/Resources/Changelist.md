@@ -1,3 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+### Version 4.0.1 ###
+
+*Support for setting selenium driver log level*
+
+| Changes in 4.0.1   |
+|--------------------|
+| Support setting selenium driver log level in selenium handler config, suppress excess output from Edge driver by default |
+        
+### Version 4.0.0 ###
+        
+*Promote release candidate version to main release*
+        
+| Changes in 4.0.0 |
+| ------ |
+| Promote RC version |
+        
+### Version 4.0.0-RC2 ###
+        
+*Support gradle 6 pathing jars for classpath scanning*
+        
+| Changes in 4.0.0-RC2 |
+| ------ |
+| Support scanning java exec classpaths from gradle 6+ which use a pathing jar to avoid problems with long classpaths on Windows platform |
+        
+### Version 4.0.0-RC1 ###
+        
+*New major version of Chorus with JDK 17 compatibility. 4.0.0-RC1 is a pre-release version for Chorus 4.0, 3.1.x is the latest stable branch*
+        
+| Changes in 4.0.0-RC1 |
+| ------ |
+| A chorus interpreter built with JDK 17, maintaining source and target compatibility for Java 8 |
+| Support for Edge browser (msedgedriver) in chorus-selenium |
         
 ### Version 3.1.3 ###
         
